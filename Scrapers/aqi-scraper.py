@@ -6,12 +6,11 @@ import csv
 def write_to_csv(data,file_name): #reference: http://pymotw.com/2/csv/
   with open(file_name,'w') as f: #existing file with the same name will be overwritten
     writer = csv.writer(f, lineterminator='\n')
-    writer.writerow( ('Rank', 'AQI', 'City', 'State', 'Population') )
+    writer.writerow( ('Rank', 'Crime Index', 'City', 'State', 'Population') )
     for i in range(len(data)):
       if data[i]:
         item = data[i]
-        writer.writerow((item[0], item[1], item[2], item[3], item[4]))#while the square brackets around data[i] might seem unnecessary, they are required
-                                  #for desired output. More details here  http://stackoverflow.com/a/27065792
+        writer.writerow((item[0], item[1], item[2], item[3], item[4]))
 
 
 def get_aqi_info():
@@ -31,7 +30,6 @@ def get_aqi_info():
         row_data = table.find_all('tr')
         for city in row_data:
             city_data = city.find_all('td')
-            #[<td>1.</td>, <td>74.5</td>, <td><a href="r.php?i=50-ca-three-rivers">Three Rivers, CA</a> / 2,278</td>]
             rank = city_data[0].string.replace(".","")
             if rank == "Rank":
                 print("Skipping Header Row")

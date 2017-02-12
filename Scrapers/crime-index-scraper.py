@@ -10,8 +10,7 @@ def write_to_csv(data,file_name): #reference: http://pymotw.com/2/csv/
     for i in range(len(data)):
       if data[i]:
         item = data[i]
-        writer.writerow((item[0], item[1], item[2], item[3], item[4]))#while the square brackets around data[i] might seem unnecessary, they are required
-                                  #for desired output. More details here  http://stackoverflow.com/a/27065792
+        writer.writerow((item[0], item[1], item[2], item[3], item[4]))
 
 
 def get_land_info():
