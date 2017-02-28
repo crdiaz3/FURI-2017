@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D327D0921E654AB90080090C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327D0911E654AB90080090C /* AppDelegate.swift */; };
+		D327D0941E654AB90080090C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327D0931E654AB90080090C /* ViewController.swift */; };
+		D327D0971E654AB90080090C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D0951E654AB90080090C /* Main.storyboard */; };
+		D327D09A1E654AB90080090C /* SustainLD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D327D0981E654AB90080090C /* SustainLD.xcdatamodeld */; };
+		D327D09C1E654AB90080090C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327D09B1E654AB90080090C /* Assets.xcassets */; };
+		D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D09D1E654AB90080090C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D327D08E1E654AB90080090C /* SustainLD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SustainLD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D327D0911E654AB90080090C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D327D0931E654AB90080090C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D327D0961E654AB90080090C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D327D0991E654AB90080090C /* SustainLD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SustainLD.xcdatamodel; sourceTree = "<group>"; };
+		D327D09B1E654AB90080090C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D327D09E1E654AB90080090C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D327D0A01E654AB90080090C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D327D08B1E654AB90080090C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D327D0851E654AB90080090C = {
+			isa = PBXGroup;
+			children = (
+				D327D0901E654AB90080090C /* SustainLD */,
+				D327D08F1E654AB90080090C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D327D08F1E654AB90080090C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D327D08E1E654AB90080090C /* SustainLD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D327D0901E654AB90080090C /* SustainLD */ = {
+			isa = PBXGroup;
+			children = (
+				D327D0911E654AB90080090C /* AppDelegate.swift */,
+				D327D0931E654AB90080090C /* ViewController.swift */,
+				D327D0951E654AB90080090C /* Main.storyboard */,
+				D327D09B1E654AB90080090C /* Assets.xcassets */,
+				D327D09D1E654AB90080090C /* LaunchScreen.storyboard */,
+				D327D0A01E654AB90080090C /* Info.plist */,
+				D327D0981E654AB90080090C /* SustainLD.xcdatamodeld */,
+			);
+			path = SustainLD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D327D08D1E654AB90080090C /* SustainLD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D327D0A31E654AB90080090C /* Build configuration list for PBXNativeTarget "SustainLD" */;
+			buildPhases = (
+				D327D08A1E654AB90080090C /* Sources */,
+				D327D08B1E654AB90080090C /* Frameworks */,
+				D327D08C1E654AB90080090C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SustainLD;
+			productName = SustainLD;
+			productReference = D327D08E1E654AB90080090C /* SustainLD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D327D0861E654AB90080090C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Christopher Diaz";
+				TargetAttributes = {
+					D327D08D1E654AB90080090C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 29K7K6F6J8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D327D0891E654AB90080090C /* Build configuration list for PBXProject "SustainLD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D327D0851E654AB90080090C;
+			productRefGroup = D327D08F1E654AB90080090C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D327D08D1E654AB90080090C /* SustainLD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D327D08C1E654AB90080090C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */,
+				D327D09C1E654AB90080090C /* Assets.xcassets in Resources */,
+				D327D0971E654AB90080090C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D327D08A1E654AB90080090C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D327D0941E654AB90080090C /* ViewController.swift in Sources */,
+				D327D0921E654AB90080090C /* AppDelegate.swift in Sources */,
+				D327D09A1E654AB90080090C /* SustainLD.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D327D0951E654AB90080090C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D327D0961E654AB90080090C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D327D09D1E654AB90080090C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D327D09E1E654AB90080090C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D327D0A11E654AB90080090C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D327D0A21E654AB90080090C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D327D0A41E654AB90080090C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 29K7K6F6J8;
+				INFOPLIST_FILE = SustainLD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.asu.furi.SustainLD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D327D0A51E654AB90080090C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 29K7K6F6J8;
+				INFOPLIST_FILE = SustainLD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.asu.furi.SustainLD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D327D0891E654AB90080090C /* Build configuration list for PBXProject "SustainLD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D327D0A11E654AB90080090C /* Debug */,
+				D327D0A21E654AB90080090C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D327D0A31E654AB90080090C /* Build configuration list for PBXNativeTarget "SustainLD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D327D0A41E654AB90080090C /* Debug */,
+				D327D0A51E654AB90080090C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D327D0981E654AB90080090C /* SustainLD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D327D0991E654AB90080090C /* SustainLD.xcdatamodel */,
+			);
+			currentVersion = D327D0991E654AB90080090C /* SustainLD.xcdatamodel */;
+			path = SustainLD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D327D0861E654AB90080090C /* Project object */;
+}
