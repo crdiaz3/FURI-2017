@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		825AB56BB16082BBACBE94DB /* Pods_SustainLD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27045FA77B7C810CFBFD57D3 /* Pods_SustainLD.framework */; };
 		D327D0921E654AB90080090C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327D0911E654AB90080090C /* AppDelegate.swift */; };
 		D327D0941E654AB90080090C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327D0931E654AB90080090C /* ViewController.swift */; };
 		D327D0971E654AB90080090C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D0951E654AB90080090C /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09FD4E7084AE8D7CB6E18D7C /* Pods-SustainLD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SustainLD.release.xcconfig"; path = "Pods/Target Support Files/Pods-SustainLD/Pods-SustainLD.release.xcconfig"; sourceTree = "<group>"; };
+		27045FA77B7C810CFBFD57D3 /* Pods_SustainLD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SustainLD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		521A628A6DA677FC11B8652A /* Pods-SustainLD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SustainLD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SustainLD/Pods-SustainLD.debug.xcconfig"; sourceTree = "<group>"; };
 		D327D08E1E654AB90080090C /* SustainLD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SustainLD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D327D0911E654AB90080090C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D327D0931E654AB90080090C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				825AB56BB16082BBACBE94DB /* Pods_SustainLD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19C2DC75CBEAA56E16065CCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				521A628A6DA677FC11B8652A /* Pods-SustainLD.debug.xcconfig */,
+				09FD4E7084AE8D7CB6E18D7C /* Pods-SustainLD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		201CE8781E901D14D0BB14FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27045FA77B7C810CFBFD57D3 /* Pods_SustainLD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D327D0851E654AB90080090C = {
 			isa = PBXGroup;
 			children = (
 				D327D0901E654AB90080090C /* SustainLD */,
 				D327D08F1E654AB90080090C /* Products */,
+				19C2DC75CBEAA56E16065CCC /* Pods */,
+				201CE8781E901D14D0BB14FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D327D0A31E654AB90080090C /* Build configuration list for PBXNativeTarget "SustainLD" */;
 			buildPhases = (
+				62DA74F3B0C7D2BA33A57BBD /* [CP] Check Pods Manifest.lock */,
 				D327D08A1E654AB90080090C /* Sources */,
 				D327D08B1E654AB90080090C /* Frameworks */,
 				D327D08C1E654AB90080090C /* Resources */,
+				317C50BFB8A3F575F161DB42 /* [CP] Embed Pods Frameworks */,
+				44132691ADDFA09C4ABDF634 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		317C50BFB8A3F575F161DB42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SustainLD/Pods-SustainLD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44132691ADDFA09C4ABDF634 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SustainLD/Pods-SustainLD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62DA74F3B0C7D2BA33A57BBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D327D08A1E654AB90080090C /* Sources */ = {
@@ -263,6 +338,7 @@
 		};
 		D327D0A41E654AB90080090C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 521A628A6DA677FC11B8652A /* Pods-SustainLD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 29K7K6F6J8;
@@ -276,6 +352,7 @@
 		};
 		D327D0A51E654AB90080090C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FD4E7084AE8D7CB6E18D7C /* Pods-SustainLD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 29K7K6F6J8;
