@@ -1,3 +1,4 @@
 *.xcuserstate
 *.DS_Store
-SustainLD.xcworkspace/xcuserdata/*
+SustainLD.xcworkspace/xcuserdata/
+SustainLD.xcodeproj/project.xcworkspace/xcuserdata/
