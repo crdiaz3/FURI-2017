@@ -10,10 +10,15 @@
 		825AB56BB16082BBACBE94DB /* Pods_SustainLD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27045FA77B7C810CFBFD57D3 /* Pods_SustainLD.framework */; };
 		D327D0921E654AB90080090C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327D0911E654AB90080090C /* AppDelegate.swift */; };
 		D327D0941E654AB90080090C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327D0931E654AB90080090C /* ViewController.swift */; };
-		D327D0971E654AB90080090C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D0951E654AB90080090C /* Main.storyboard */; };
+		D327D0971E654AB90080090C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D0951E654AB90080090C /* Auth.storyboard */; };
 		D327D09A1E654AB90080090C /* SustainLD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D327D0981E654AB90080090C /* SustainLD.xcdatamodeld */; };
 		D327D09C1E654AB90080090C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327D09B1E654AB90080090C /* Assets.xcassets */; };
 		D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D09D1E654AB90080090C /* LaunchScreen.storyboard */; };
+		D3A0F9351E6606CE00638A2E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0F9341E6606CE00638A2E /* LoginViewController.swift */; };
+		D3A0F9381E660C5A00638A2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3A0F9371E660C5A00638A2E /* GoogleService-Info.plist */; };
+		D3A0F93B1E660F9C00638A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A0F93A1E660F9C00638A2E /* Main.storyboard */; };
+		D3A0F93D1E660FDD00638A2E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0F93C1E660FDD00638A2E /* SignUpViewController.swift */; };
+		D3A0F9401E66111E00638A2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0F93F1E66111E00638A2E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +28,16 @@
 		D327D08E1E654AB90080090C /* SustainLD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SustainLD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D327D0911E654AB90080090C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D327D0931E654AB90080090C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D327D0961E654AB90080090C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D327D0961E654AB90080090C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		D327D0991E654AB90080090C /* SustainLD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SustainLD.xcdatamodel; sourceTree = "<group>"; };
 		D327D09B1E654AB90080090C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D327D09E1E654AB90080090C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D327D0A01E654AB90080090C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A0F9341E6606CE00638A2E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D3A0F9371E660C5A00638A2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3A0F93A1E660F9C00638A2E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D3A0F93C1E660FDD00638A2E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D3A0F93F1E66111E00638A2E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,7 @@
 		D327D0851E654AB90080090C = {
 			isa = PBXGroup;
 			children = (
+				D3A0F9371E660C5A00638A2E /* GoogleService-Info.plist */,
 				D327D0901E654AB90080090C /* SustainLD */,
 				D327D08F1E654AB90080090C /* Products */,
 				19C2DC75CBEAA56E16065CCC /* Pods */,
@@ -80,15 +91,43 @@
 		D327D0901E654AB90080090C /* SustainLD */ = {
 			isa = PBXGroup;
 			children = (
+				D3A0F93E1E66111100638A2E /* Models */,
+				D3A0F9391E660F6C00638A2E /* Main */,
+				D3A0F9361E660A1A00638A2E /* Auth */,
 				D327D0911E654AB90080090C /* AppDelegate.swift */,
 				D327D0931E654AB90080090C /* ViewController.swift */,
-				D327D0951E654AB90080090C /* Main.storyboard */,
 				D327D09B1E654AB90080090C /* Assets.xcassets */,
 				D327D09D1E654AB90080090C /* LaunchScreen.storyboard */,
 				D327D0A01E654AB90080090C /* Info.plist */,
 				D327D0981E654AB90080090C /* SustainLD.xcdatamodeld */,
 			);
 			path = SustainLD;
+			sourceTree = "<group>";
+		};
+		D3A0F9361E660A1A00638A2E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D327D0951E654AB90080090C /* Auth.storyboard */,
+				D3A0F9341E6606CE00638A2E /* LoginViewController.swift */,
+				D3A0F93C1E660FDD00638A2E /* SignUpViewController.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		D3A0F9391E660F6C00638A2E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0F93A1E660F9C00638A2E /* Main.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D3A0F93E1E66111100638A2E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3A0F93F1E66111E00638A2E /* User.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */,
+				D3A0F93B1E660F9C00638A2E /* Main.storyboard in Resources */,
+				D3A0F9381E660C5A00638A2E /* GoogleService-Info.plist in Resources */,
 				D327D09C1E654AB90080090C /* Assets.xcassets in Resources */,
-				D327D0971E654AB90080090C /* Main.storyboard in Resources */,
+				D327D0971E654AB90080090C /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,21 +256,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A0F9351E6606CE00638A2E /* LoginViewController.swift in Sources */,
 				D327D0941E654AB90080090C /* ViewController.swift in Sources */,
+				D3A0F9401E66111E00638A2E /* User.swift in Sources */,
 				D327D0921E654AB90080090C /* AppDelegate.swift in Sources */,
 				D327D09A1E654AB90080090C /* SustainLD.xcdatamodeld in Sources */,
+				D3A0F93D1E660FDD00638A2E /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D327D0951E654AB90080090C /* Main.storyboard */ = {
+		D327D0951E654AB90080090C /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D327D0961E654AB90080090C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 		D327D09D1E654AB90080090C /* LaunchScreen.storyboard */ = {
@@ -383,6 +427,7 @@
 				D327D0A51E654AB90080090C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
