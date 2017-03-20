@@ -20,6 +20,9 @@
 		D3A0F93B1E660F9C00638A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A0F93A1E660F9C00638A2E /* Main.storyboard */; };
 		D3A0F93D1E660FDD00638A2E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0F93C1E660FDD00638A2E /* SignUpViewController.swift */; };
 		D3A0F9401E66111E00638A2E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0F93F1E66111E00638A2E /* User.swift */; };
+		D3D645CB1E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645B91E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf */; };
+		D3D645CE1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645BC1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf */; };
+		D3D645D41E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645C21E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		D3A0F93A1E660F9C00638A2E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D3A0F93C1E660FDD00638A2E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D3A0F93F1E66111E00638A2E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D3D645B91E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskExtraLight.otf"; sourceTree = "<group>"; };
+		D3D645BC1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskLight.otf"; sourceTree = "<group>"; };
+		D3D645C21E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskRegular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 		D327D0901E654AB90080090C /* SustainLD */ = {
 			isa = PBXGroup;
 			children = (
+				D3D645B01E8037FE000E5FFE /* Resources */,
 				D3A0F93E1E66111100638A2E /* Models */,
 				D3A0F9391E660F6C00638A2E /* Main */,
 				D3A0F9361E660A1A00638A2E /* Auth */,
@@ -131,6 +138,16 @@
 				D3A0F93F1E66111E00638A2E /* User.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D3D645B01E8037FE000E5FFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3D645B91E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf */,
+				D3D645BC1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf */,
+				D3D645C21E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,11 +213,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D645CB1E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf in Resources */,
 				D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */,
 				D3A0F93B1E660F9C00638A2E /* Main.storyboard in Resources */,
+				D3D645CE1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf in Resources */,
 				D34B22D51E7F51D8006D9705 /* Auth.storyboard in Resources */,
 				D3A0F9381E660C5A00638A2E /* GoogleService-Info.plist in Resources */,
 				D327D09C1E654AB90080090C /* Assets.xcassets in Resources */,
+				D3D645D41E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
