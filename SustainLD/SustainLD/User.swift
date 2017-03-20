@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 
@@ -29,7 +28,8 @@ class User {
                 //registration successful
                 var ref: FIRDatabaseReference!
                 ref = FIRDatabase.database().reference().child("userInfo").child((user?.uid)!)
-                
+                ref.child("firstName").setValue(curUser.firstName)
+                ref.child("lastName").setValue(curUser.lastName)
                 ref.child("email").setValue(curUser.email)
                 
             }else{

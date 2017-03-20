@@ -10,10 +10,11 @@
 		825AB56BB16082BBACBE94DB /* Pods_SustainLD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27045FA77B7C810CFBFD57D3 /* Pods_SustainLD.framework */; };
 		D327D0921E654AB90080090C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327D0911E654AB90080090C /* AppDelegate.swift */; };
 		D327D0941E654AB90080090C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327D0931E654AB90080090C /* ViewController.swift */; };
-		D327D0971E654AB90080090C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D0951E654AB90080090C /* Auth.storyboard */; };
 		D327D09A1E654AB90080090C /* SustainLD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D327D0981E654AB90080090C /* SustainLD.xcdatamodeld */; };
 		D327D09C1E654AB90080090C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327D09B1E654AB90080090C /* Assets.xcassets */; };
 		D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D09D1E654AB90080090C /* LaunchScreen.storyboard */; };
+		D34B22D21E7F4811006D9705 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34B22D11E7F4811006D9705 /* NameViewController.swift */; };
+		D34B22D51E7F51D8006D9705 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34B22D31E7F51D8006D9705 /* Auth.storyboard */; };
 		D3A0F9351E6606CE00638A2E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0F9341E6606CE00638A2E /* LoginViewController.swift */; };
 		D3A0F9381E660C5A00638A2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3A0F9371E660C5A00638A2E /* GoogleService-Info.plist */; };
 		D3A0F93B1E660F9C00638A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A0F93A1E660F9C00638A2E /* Main.storyboard */; };
@@ -28,11 +29,12 @@
 		D327D08E1E654AB90080090C /* SustainLD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SustainLD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D327D0911E654AB90080090C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D327D0931E654AB90080090C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D327D0961E654AB90080090C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		D327D0991E654AB90080090C /* SustainLD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SustainLD.xcdatamodel; sourceTree = "<group>"; };
 		D327D09B1E654AB90080090C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D327D09E1E654AB90080090C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D327D0A01E654AB90080090C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D34B22D11E7F4811006D9705 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		D34B22D41E7F51D8006D9705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		D3A0F9341E6606CE00638A2E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D3A0F9371E660C5A00638A2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3A0F93A1E660F9C00638A2E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -107,9 +109,10 @@
 		D3A0F9361E660A1A00638A2E /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				D327D0951E654AB90080090C /* Auth.storyboard */,
+				D34B22D31E7F51D8006D9705 /* Auth.storyboard */,
 				D3A0F9341E6606CE00638A2E /* LoginViewController.swift */,
 				D3A0F93C1E660FDD00638A2E /* SignUpViewController.swift */,
+				D34B22D11E7F4811006D9705 /* NameViewController.swift */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -195,9 +198,9 @@
 			files = (
 				D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */,
 				D3A0F93B1E660F9C00638A2E /* Main.storyboard in Resources */,
+				D34B22D51E7F51D8006D9705 /* Auth.storyboard in Resources */,
 				D3A0F9381E660C5A00638A2E /* GoogleService-Info.plist in Resources */,
 				D327D09C1E654AB90080090C /* Assets.xcassets in Resources */,
-				D327D0971E654AB90080090C /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +261,7 @@
 			files = (
 				D3A0F9351E6606CE00638A2E /* LoginViewController.swift in Sources */,
 				D327D0941E654AB90080090C /* ViewController.swift in Sources */,
+				D34B22D21E7F4811006D9705 /* NameViewController.swift in Sources */,
 				D3A0F9401E66111E00638A2E /* User.swift in Sources */,
 				D327D0921E654AB90080090C /* AppDelegate.swift in Sources */,
 				D327D09A1E654AB90080090C /* SustainLD.xcdatamodeld in Sources */,
@@ -268,20 +272,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D327D0951E654AB90080090C /* Auth.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D327D0961E654AB90080090C /* Base */,
-			);
-			name = Auth.storyboard;
-			sourceTree = "<group>";
-		};
 		D327D09D1E654AB90080090C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D327D09E1E654AB90080090C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D34B22D31E7F51D8006D9705 /* Auth.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D34B22D41E7F51D8006D9705 /* Base */,
+			);
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -384,7 +388,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 521A628A6DA677FC11B8652A /* Pods-SustainLD.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-globe-red-nl";
 				DEVELOPMENT_TEAM = 29K7K6F6J8;
 				INFOPLIST_FILE = SustainLD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -398,7 +402,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09FD4E7084AE8D7CB6E18D7C /* Pods-SustainLD.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-globe-red-nl";
 				DEVELOPMENT_TEAM = 29K7K6F6J8;
 				INFOPLIST_FILE = SustainLD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -3,7 +3,7 @@
 //  Skoovy
 //
 //  Created by Christopher Diaz on 1/12/17.
-//  Copyright © 2017 Hot Salsa Interactive. All rights reserved.
+//  Copyright © 2017 Christopher Diaz. All rights reserved.
 //
 
 import UIKit
@@ -13,14 +13,15 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
+
     
-    @IBOutlet weak var next_btn: UIButton!
-    
-    @IBOutlet weak var username_txt: UITextField!
-    
-    @IBOutlet weak var password_text: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var statusLabel: UILabel!
+    
+    @IBOutlet weak var nextbutton: UIButton!
+    
     let rootRef = FIRDatabase.database().reference()
     
     override func viewDidLoad() {
@@ -28,17 +29,16 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func auth_user(_ sender: Any) {
-        
-        FIRAuth.auth()?.signIn(withEmail: username_txt.text!, password: password_text.text!) { (user, error) in
+    @IBAction func authenticateUser(_ sender: Any) {
+        FIRAuth.auth()?.signIn(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
             
             if(error == nil){
                 
                 //User exists
                 NSLog("Login Successful")
+                self.performSegue(withIdentifier: "loggedIn", sender: self)
             }
             else{
-                
                 // User does not exists
                 self.statusLabel.isHidden = false
                 self.statusLabel.text = "Wrong Username and/or Password"
@@ -48,27 +48,18 @@ class LoginViewController: UIViewController {
             
             
         }
-        
-        
+
     }
     
-    @IBAction func cancelButtonClicked(_ sender: Any) {
-        _ = self.navigationController?.popViewController(animated: true)
+    
+    func textFieldShouldReturn(_ passwordField: UITextField) -> Bool {
+        passwordField.resignFirstResponder()
+        return true
     }
     
     // hides keyboard if touch action happens outside of UITextView
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Check for next field
-        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
-            nextField.becomeFirstResponder()
-        } else {
-            textField.resignFirstResponder()
-        }
-        return false
     }
     
 }

@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "08ddcd357aad22b1f6c477046edb07a3"
+build_time: [542908644, 591394000]
+inputs:
+  "/Users/cdiaz/Documents/School/Research/FURI-2017/SustainLD/SustainLD/LoginViewController.swift": [9223372036854775807, 0]
+  "/Users/cdiaz/Documents/School/Research/FURI-2017/SustainLD/SustainLD/ViewController.swift": [9223372036854775807, 0]
+  "/Users/cdiaz/Documents/School/Research/FURI-2017/SustainLD/SustainLD/User.swift": [9223372036854775807, 0]
+  "/Users/cdiaz/Documents/School/Research/FURI-2017/SustainLD/SustainLD/AppDelegate.swift": [9223372036854775807, 0]
+  "/Users/cdiaz/Documents/School/Research/FURI-2017/SustainLD/SustainLD/SignUpViewController.swift": [9223372036854775807, 0]

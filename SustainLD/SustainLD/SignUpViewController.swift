@@ -16,14 +16,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var validPasswordLabel: UILabel!
     
-    @IBOutlet weak var nextButton: UIButton!
-
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureFields()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,14 +34,14 @@ class SignUpViewController: UIViewController {
     func configureFields(){
         // Name View Config
         
-        passwordField?.addTarget(self, action: #selector(SignUpViewController.passwordCheck), for: .editingChanged)
+        passwordField?.addTarget(self, action: #selector(SignUpViewController.checkEmailPwFields), for: .editingChanged)
         
-        confirmPasswordField?.addTarget(self, action: #selector(SignUpViewController.passwordCheck), for: .editingChanged)
+        confirmPasswordField?.addTarget(self, action: #selector(SignUpViewController.checkEmailPwFields), for: .editingChanged)
         
         // Email View Config
-        nextButton?.isEnabled = false
+        signUpButton?.isEnabled = false
         
-        emailField?.addTarget(self, action: #selector(SignUpViewController.checkEmailField), for: .editingChanged)
+        emailField?.addTarget(self, action: #selector(SignUpViewController.checkEmailPwFields), for: .editingChanged)
         
     }
     
@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController {
     func checkEmailPwFields(){
         if emailField.text! != ""{
             if !isValidEmailAddress(curEmail: emailField.text!) {
-                nextButton.isEnabled = false
+                signUpButton.isEnabled = false
                 self.validEmailLabel.text = "Invalid email"
                 self.validEmailLabel.textColor = UIColor.red
                 
@@ -66,24 +66,6 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    func checkEmailField() {
-        if emailField.text! == "" {
-            nextButton.isEnabled = false
-            validEmailLabel.text = "A username must be entered"
-            validEmailLabel.textColor = UIColor.darkGray
-        } else if !isValidEmailAddress(curEmail: emailField.text!) {
-            nextButton.isEnabled = false
-            validEmailLabel.text = "Invalid email"
-            validEmailLabel.textColor = UIColor.red
-            
-        } else {
-            validEmailLabel.text = "Valid email"
-            validEmailLabel.textColor = UIColor.green
-            nextButton.isEnabled = true
-            curUser.email = emailField.text!
-        }
-    }
-    
     func isValidEmailAddress(curEmail:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         
@@ -94,31 +76,31 @@ class SignUpViewController: UIViewController {
     // Enable next button when valid password has been entered into fields
     func passwordCheck() {
         if passwordField.text! == "" || passwordField.text! == "" {
-            validPasswordLabel.text = "An email must be entered"
-            validPasswordLabel.textColor = UIColor.darkGray
-            nextButton.isEnabled = false
+            signUpButton.isEnabled = false
         } else if self.passwordField.text!.characters.count < 5 {
             // password must be at least 5 characters
             validPasswordLabel.text = "Password must be at least 5 characters"
             validEmailLabel.textColor = UIColor.red
-            nextButton.isEnabled = false
+            signUpButton.isEnabled = false
             
         } else if passwordField.text! != confirmPasswordField.text! {
             // Passwords don't match
             validPasswordLabel.text = "Password do not match"
             validPasswordLabel.textColor = UIColor.red
-            nextButton.isEnabled = false
+            signUpButton.isEnabled = false
             
         } else {
             validPasswordLabel.text = "Valid password"
             validPasswordLabel.textColor = UIColor.green
-            nextButton.isEnabled = true
+            signUpButton.isEnabled = true
+            curUser.email = emailField.text!
         }
     }
     
     @IBAction func signUpClicked(_ sender: Any) {
         curUser.addUserToFirebase(password: passwordField.text!)
     }
+    
     /*
      // MARK: - Navigation
      
@@ -128,5 +110,5 @@ class SignUpViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-
+    
 }
