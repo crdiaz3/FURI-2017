@@ -1,5 +1,5 @@
 {
-    "@context": "https://raw.githubusercontent.com/crdiaz3/master/JSON-Data/stadiums_context.jsonld",
+    "@context": "https://raw.githubusercontent.com/crdiaz3/FURI-2017/master/JSON-LD/city-content.jsonld",
     "@type": "https://schema.org/City",
     "name": "Tempe, AZ",
     "geo": {
