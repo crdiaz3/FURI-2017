@@ -1,15 +1,19 @@
 {
-  "@context": "http://schema.org",
-  "@type": "Place",
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "40.75",
-    "longitude": "73.98"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4",
-    "reviewCount": "250"
-  },
-  "name": "GreatFood",
+    "@context": "https://raw.githubusercontent.com/crdiaz3/master/JSON-Data/stadiums_context.jsonld",
+    "@type": "https://schema.org/City",
+    "name": "Tempe, AZ",
+    "geo": {
+        "latitude": 37.0706651,
+        "@type": "GeoCoordinates",
+        "longitude": -95.6415231
+    },
+    "aqi": "",
+    "avg-max-temp": "",
+    "avg-min-temp": "",
+    "population": "",
+    "pop-growth-rate": "",
+    "crime-index": "",
+    "land-area": "",
+    "water-area": "",
+    "year": "2012"
 }
