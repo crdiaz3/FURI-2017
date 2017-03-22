@@ -19,10 +19,12 @@
       "@id": "https://schema.org/addressRegion",
       "@type": "xsd:string"
     },
-    "additionalProperty": "https://schema.org/additionalProperty",
+    "additionalProperty": {
+      "@id": "https://schema.org/additionalProperty",
+      "@type": "https://schema.org/PropertyValue"
+    },
     "aqi": {
       "@id": "https://schema.org/propertyValue",
-      "name": "aqi",
       "@type": "xsd:float"
     },
     "avg-max-temp": {

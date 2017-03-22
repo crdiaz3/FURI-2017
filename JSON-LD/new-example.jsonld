@@ -10,33 +10,42 @@
       "addressLocality": "Tempe",
       "addressRegion": "AZ"
     },
-    "additionalProperty": {
-      "aqi": {
-        "value": 1.0,
+    "additionalProperty": [
+      {
+        "name": "aqi",
+        "value": 1.0
       },
-      "avg-max-temp": {
-        "value": 1.0,
+      {
+        "name": "avg-max-temp",
+        "value": 1.0
       },
-      "avg-min-temp": {
-        "value": 1.0,
+      {
+        "name": "avg-min-temp",
+        "value": 1.0
       },
-      "population": {
-        "value": 1.0,
+      {
+        "name": "population",
+        "value": 100
       },
-      "pop-growth-rate": {
-        "value": 1.0,
+      {
+        "name": "pop-growth-rate",
+        "value": 1.0
       },
-      "crime-index": {
-        "value": 1.0,
+      {
+        "name": "crime-index",
+        "value": 1.0
       },
-      "land-area": {
-        "value": 1.0,
+      {
+        "name": "land-area",
+        "value": 1.0
       },
-      "water-area": {
-        "value": 1.0,
+      {
+        "name": "water-area",
+        "value": 1.0
       },
-      "year": {
-        "value": 2014,
-      },
-    }
+      {
+        "name": "year",
+        "value": 2014
+      }
+    ]
 }
