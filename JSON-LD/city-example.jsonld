@@ -13,48 +13,39 @@
       "addressRegion": "AZ"
     },
     "aqi": {
-      "@type": "https://schema.org/propertyValue",
-      "name": "aqi",
+      "@type": "https://schema.org/additionalProperty",
       "value": 1.0
     },
     "avg-max-temp": {
-      "@type": "https://schema.org/propertyValue",
-      "name": "avg-max-temp",
+      "@type": "https://schema.org/additionalProperty",
       "value": 1.0
     },
     "avg-min-temp": {
-      "@type": "https://schema.org/propertyValue",
-      "name": "avg-min-temp",
+      "@type": "https://schema.org/additionalProperty",
       "value": 1.0
     },
     "population": {
       "@type": "https://schema.org/additionalProperty",
-      "name": "population",
       "value": 1
     },
     "pop-growth-rate": {
-      "@type": "https://schema.org/propertyValue",
-      "name": "pop-growth-rate",
+      "@type": "https://schema.org/additionalProperty",
       "value": 1.0
     },
     "crime-index": {
-      "@type": "https://schema.org/propertyValue",
-      "name": "crime-index",
+      "@type": "https://schema.org/additionalProperty",
       "value": 1.0
     },
     "land-area": {
-      "@type": "https://schema.org/propertyValue",
-      "name": "land-area",
+      "@type": "https://schema.org/additionalProperty",
       "value": 1.0
     },
     "water-area": {
-      "@type": "https://schema.org/propertyValue",
-      "name": "water-area",
+      "@type": "https://schema.org/additionalProperty",
       "value": 1.0
     },
     "year": {
-      "@type": "https://schema.org/propertyValue",
-      "name": "yeara",
+      "@type": "https://schema.org/additionalProperty",
       "value": 2014
     }
 }

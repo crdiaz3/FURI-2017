@@ -1,5 +1,6 @@
 {
   "@context": {
+    "@type": "https://schema.org/City",
     "name": "http://schema.org/name",
     "geo": "http://schema.org/GeoCoordinates",
     "latitude": {
