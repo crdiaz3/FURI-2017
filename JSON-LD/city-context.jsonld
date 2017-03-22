@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "name": "http://schema.org/name",
+    "geo": "http://schema.org/geo",
+    "latitude": {
+      "@id": "http://schema.org/latitude",
+      "@type": "xsd:float"
+    },
+    "longitude": {
+      "@id": "http://schema.org/longitude",
+      "@type": "xsd:float"
+    },
+    "address":  "https://schema.org/PostalAddress",
+    "addressLocality": {
+      "@id": "https://schema.org/addressLocality",
+      "@type": "xsd:string"
+    },
+    "addressRegion": {
+      "@id": "https://schema.org/addressRegion",
+      "@type": "xsd:string"
+    },
+    "additionalProperty": "https://schema.org/additionalProperty",
+    "aqi": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:float"
+    },
+    "avg-max-temp": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:float"
+    },
+    "avg-min-temp": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:float"
+    },
+    "population": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:int"
+    },
+    "pop-growth-rate": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:float"
+    },
+    "crime-index": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:float"
+    },
+    "land-area": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:float"
+    },
+    "water-area": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:float"
+    },
+    "year": {
+      "@id": "https://schema.org/propertyValue",
+      "@type": "xsd:int"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+ }
+}
