@@ -3,9 +3,9 @@
     "@type": "https://schema.org/City",
     "name": "Tempe, AZ",
     "geo": {
-        "latitude": 37.0706651,
+        "latitude": 33.4255104,
         "@type": "GeoCoordinates",
-        "longitude": -95.6415231
+        "longitude": -111.94000
     },
     "aqi": "",
     "avg-max-temp": "",
