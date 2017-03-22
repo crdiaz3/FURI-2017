@@ -1,8 +1,7 @@
 {
   "@context": {
-    "@type": "https://schema.org/City",
     "name": "http://schema.org/name",
-    "geo": "http://schema.org/GeoCoordinates",
+    "geo": "http://schema.org/geo",
     "latitude": {
       "@id": "http://schema.org/latitude",
       "@type": "xsd:float"
