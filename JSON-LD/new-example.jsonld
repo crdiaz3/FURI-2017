@@ -2,6 +2,7 @@
     "@context": "https://raw.githubusercontent.com/crdiaz3/FURI-2017/master/JSON-LD/city-context.jsonld",
     "@type": "https://schema.org/City",
     "name": "Tempe, AZ",
+    "aggregateRating": 100,
     "geo": {
         "latitude": 33.4255104,
         "longitude": -111.94000

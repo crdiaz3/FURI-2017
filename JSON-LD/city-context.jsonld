@@ -2,6 +2,10 @@
   "@context": {
     "name": "http://schema.org/name",
     "geo": "http://schema.org/geo",
+    "aggregateRating": {
+      "@id":"https://schema.org/AggregateRating",
+      "@type": "xsd:float"
+    },
     "latitude": {
       "@id": "http://schema.org/latitude",
       "@type": "xsd:float"
