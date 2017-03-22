@@ -1,7 +1,7 @@
 {
   "@context": {
     "name": "http://schema.org/name",
-    "geo": "http://schema.org/geo",
+    "geo": "http://schema.org/GeoCoordinates",
     "ratingValue": {
       "@id": "https://schema.org/ratingValue",
       "@type": "xsd:float"
