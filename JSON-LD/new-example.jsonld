@@ -1,5 +1,5 @@
 {
-    "@context": "https://raw.githubusercontent.com/crdiaz3/FURI-2017/master/JSON-LD/city-content.jsonld",
+    "@context": "https://raw.githubusercontent.com/crdiaz3/FURI-2017/master/JSON-LD/city-context.jsonld",
     "@type": "https://schema.org/City",
     "name": "Tempe, AZ",
     "geo": {
@@ -11,18 +11,32 @@
       "addressRegion": "AZ"
     },
     "additionalProperty": {
-      "name": "aqi",
-      "value": 1.1
-    },
-    "additionalProperty": {
-      "aqi": 1.0,
-      "avg-max-temp": 1.0,
-      "avg-min-temp": 1.0,
-      "population": 100,
-      "pop-growth-rate": 1.0,
-      "crime-index": 1.0,
-      "land-area": 1.0,
-      "water-area": 1.0,
-      "year": 2014
+      "aqi": {
+        "value": 1.0,
+      },
+      "avg-max-temp": {
+        "value": 1.0,
+      },
+      "avg-min-temp": {
+        "value": 1.0,
+      },
+      "population": {
+        "value": 1.0,
+      },
+      "pop-growth-rate": {
+        "value": 1.0,
+      },
+      "crime-index": {
+        "value": 1.0,
+      },
+      "land-area": {
+        "value": 1.0,
+      },
+      "water-area": {
+        "value": 1.0,
+      },
+      "year": {
+        "value": 2014,
+      },
     }
 }
