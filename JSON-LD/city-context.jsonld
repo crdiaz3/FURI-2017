@@ -2,8 +2,8 @@
   "@context": {
     "name": "http://schema.org/name",
     "geo": "http://schema.org/geo",
-    "aggregateRating": {
-      "@id":"https://schema.org/AggregateRating",
+    "ratingValue": {
+      "@id": "https://schema.org/ratingValue",
       "@type": "xsd:float"
     },
     "latitude": {
