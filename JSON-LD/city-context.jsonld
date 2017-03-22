@@ -19,10 +19,7 @@
       "@id": "https://schema.org/addressRegion",
       "@type": "xsd:string"
     },
-    "additionalProperty": {
-      "@id": "https://schema.org/additionalProperty",
-      "@type": "https://schema.org/PropertyValue"
-    },
+    "additionalProperty": "https://schema.org/additionalProperty",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
  }
 }
