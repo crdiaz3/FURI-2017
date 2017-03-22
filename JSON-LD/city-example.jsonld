@@ -3,17 +3,58 @@
     "@type": "https://schema.org/City",
     "name": "Tempe, AZ",
     "geo": {
+        "@type": "https://schema.org/geo",
         "latitude": 33.4255104,
-        "@type": "GeoCoordinates",
         "longitude": -111.94000
     },
-    "aqi": "",
-    "avg-max-temp": "",
-    "avg-min-temp": "",
-    "population": "",
-    "pop-growth-rate": "",
-    "crime-index": "",
-    "land-area": "",
-    "water-area": "",
-    "year": "2012"
+    "address": {
+      "@type": "https://schema.org/address",
+      "addressLocality": "Tempe",
+      "addressRegion": "AZ"
+    },
+    "aqi": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "aqi",
+      "value": 1.0
+    },
+    "avg-max-temp": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "avg-max-temp",
+      "value": 1.0
+    },
+    "avg-min-temp": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "avg-min-temp",
+      "value": 1.0
+    },
+    "population": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "population",
+      "value": 1
+    },
+    "pop-growth-rate": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "pop-growth-rate",
+      "value": 1.0
+    },
+    "crime-index": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "crime-index",
+      "value": 1.0
+    },
+    "land-area": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "land-area",
+      "value": 1.0
+    },
+    "water-area": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "water-area",
+      "value": 1.0
+    },
+    "year": {
+      "@type": "https://schema.org/propertyValue",
+      "name": "yeara",
+      "value": 2014
+    }
 }

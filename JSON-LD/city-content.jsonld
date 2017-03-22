@@ -10,6 +10,15 @@
       "@id": "http://schema.org/longitude",
       "@type": "xsd:float"
     },
+    "address":  "https://schema.org/PostalAddress",
+    "addressLocality": {
+      "@id": "https://schema.org/addressLocality",
+      "@type": "xsd:string"
+    },
+    "addressRegion": {
+      "@id": "https://schema.org/addressRegion",
+      "@type": "xsd:string"
+    },
     "aqi": {
       "@id": "https://schema.org/additionalProperty",
       "@type": "xsd:float"
