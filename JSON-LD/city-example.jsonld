@@ -3,12 +3,12 @@
     "@type": "https://schema.org/City",
     "name": "Tempe, AZ",
     "geo": {
-        "@type": "https://schema.org/geo",
+        "@type": "https://schema.org/GeoCoordinates",
         "latitude": 33.4255104,
         "longitude": -111.94000
     },
     "address": {
-      "@type": "https://schema.org/address",
+      "@type": "https://schema.org/PostalAddress",
       "addressLocality": "Tempe",
       "addressRegion": "AZ"
     },
@@ -28,7 +28,7 @@
       "value": 1.0
     },
     "population": {
-      "@type": "https://schema.org/propertyValue",
+      "@type": "https://schema.org/additionalProperty",
       "name": "population",
       "value": 1
     },
