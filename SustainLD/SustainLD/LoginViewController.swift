@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
 
     
@@ -52,9 +52,17 @@ class LoginViewController: UIViewController {
     }
     
     
-    func textFieldShouldReturn(_ passwordField: UITextField) -> Bool {
-        passwordField.resignFirstResponder()
-        return true
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Check for next field
+        if(textField.tag == 1){
+            authenticateUser(self)
+        }
+        else if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
     }
     
     // hides keyboard if touch action happens outside of UITextView

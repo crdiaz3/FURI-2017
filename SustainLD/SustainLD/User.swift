@@ -21,7 +21,10 @@ class User {
         self.lastName = ""
     }
     
-    func addUserToFirebase(password newPassword:String){
+    func addUserToFirebase(password newPassword:String) -> Bool {
+        
+        var success: Bool
+        success = false
         
         FIRAuth.auth()?.createUser(withEmail: curUser.email, password: newPassword, completion: { (user: FIRUser?, error) in
             if error == nil {
@@ -31,12 +34,16 @@ class User {
                 ref.child("firstName").setValue(curUser.firstName)
                 ref.child("lastName").setValue(curUser.lastName)
                 ref.child("email").setValue(curUser.email)
+                success = true
                 
             }else{
                 // Registration failure
                 NSLog("Failed to add: " + curUser.email)
+                success = false
             }
         })
+        
+        return success
         
     }
     

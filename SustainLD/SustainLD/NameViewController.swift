@@ -45,6 +45,24 @@ class NameViewController: UIViewController {
             curUser.lastName = lastNameField.text!
         }
     }
+    
+    // hides keyboard if touch action happens outside of UITextView
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Check for next field
+        if(textField.tag == 1){
+            performSegue(withIdentifier: "nameNextSegue", sender: self)
+        }
+        else if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
+    }
 
     /*
     // MARK: - Navigation

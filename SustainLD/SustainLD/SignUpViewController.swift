@@ -98,7 +98,31 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpClicked(_ sender: Any) {
-        curUser.addUserToFirebase(password: passwordField.text!)
+        if(curUser.addUserToFirebase(password: passwordField.text!)){
+            self.performSegue(withIdentifier: "loggedIn", sender: self)
+        } else {
+            signUpButton.isEnabled = false
+            self.validEmailLabel.text = "Email already exists"
+            self.validEmailLabel.textColor = UIColor.red
+        }
+    }
+    
+    // hides keyboard if touch action happens outside of UITextView
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Check for next field
+        if(textField.tag == 2){
+            signUpClicked(self)
+        }
+        else if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
     }
     
     /*

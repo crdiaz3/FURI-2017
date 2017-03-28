@@ -122,7 +122,7 @@
                                 <fontDescription key="fontDescription" name="NiveauGroteskExtraLight" family="Niveau Grotesk" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                 <connections>
-                                    <outlet property="delegate" destination="yuP-cT-nZb" id="Jrs-Lh-Sqr"/>
+                                    <outlet property="delegate" destination="I5r-Ha-8KQ" id="hMQ-qP-7Fs"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nD6-H5-hr4">
@@ -131,7 +131,7 @@
                                 <fontDescription key="fontDescription" name="NiveauGroteskExtraLight" family="Niveau Grotesk" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="yuP-cT-nZb" id="mPf-MY-J8B"/>
+                                    <outlet property="delegate" destination="I5r-Ha-8KQ" id="5YB-sK-b13"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo8-al-CFJ">
@@ -266,7 +266,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpClicked:" destination="AhP-8B-BT8" eventType="touchUpInside" id="Yel-QO-zvN"/>
-                                    <segue destination="RNN-48-raZ" kind="presentation" id="I0U-e4-pBM"/>
+                                    <segue destination="RNN-48-raZ" kind="presentation" identifier="signUpSeque" id="I0U-e4-pBM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -343,7 +343,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AhP-8B-BT8" kind="show" id="rB2-Pf-Rqn"/>
+                                    <segue destination="AhP-8B-BT8" kind="show" identifier="nameNextSegue" id="rB2-Pf-Rqn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-EU-yw2">
