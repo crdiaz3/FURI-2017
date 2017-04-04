@@ -47,17 +47,17 @@
           {
             "name": "land-area",
             "value": 1.1,
-            "ratingValue": 100
+            "ratingValue": 90
           },
           {
             "name": "water-area",
             "value": 1.1,
-            "ratingValue": 100
+            "ratingValue": 10
           },
           {
             "name": "year",
             "value": 2014,
-            "ratingValue": 100
+            "ratingValue": 95
           }
         ]
       }
