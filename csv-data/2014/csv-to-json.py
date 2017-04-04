@@ -32,114 +32,93 @@ def get_property_index(prop_list, prop):
 
 first_csv_file = 'aqi-data.csv'
 
-csv_files = [
-    'avg-max-temp.csv',
-    'avg-min-temp.csv',
-    'crime-index-data.csv',
-    'land-area-data.csv',
-    'pop-growth-rate-data.csv',
-    'water-area-data.csv'
-]
-
 base_addr = 'https://maps.googleapis.com/maps/api/geocode/json?address='
 to_json = {'@context': 'https://raw.githubusercontent.com/crdiaz3/FURI-2017/master/JSON-LD/city-context.jsonld',
             'generatedAt': '2014',
-            '@graph': []
-          }
+            '@graph': []}
 
 missing = []
 
-# Structures initial jsonld file
-with open(first_csv_file, 'r') as f:
-    data = csv.reader(f)
 
-    for row in data:
-        r = requests.get(base_addr+row[2]+ ',' + row[3])
-        geocoder_result = r.json()
-        if len(geocoder_result['results']) > 0:
-            to_json['@graph'].append( {
-                '@type': 'https://schema.org/City',
-                'name': row[2]+ ',' + row[3],
-                'ratingValue': 0,
-                'geo': {
-                    'latitude': geocoder_result['results'][0]['geometry']['location']['lat'],
-                    'longitude': geocoder_result['results'][0]['geometry']['location']['lng']
-                },
-                'address': {
-                  'addressLocality': row[2],
-                  'addressRegion': row[3]
-                },
-                'additionalProperty': [
-                  {
-                    'name': 'aqi',
-                    'value': row[1],
-                    'ratingValue': row[0]
-                  },
-                  {
-                    'name': 'avg-max-temp',
-                    'value': 0,
-                    'ratingValue': 0
-                  },
-                  {
-                    'name': 'avg-min-temp',
-                    'value': 0,
-                    'ratingValue': 0
-                  },
-                  {
-                    'name': 'population',
-                    'value': row[4],
-                  },
-                  {
-                    'name': 'pop-growth-rate',
-                    'value': 0,
-                    'ratingValue': 0
-                  },
-                  {
-                    'name': 'crime-index',
-                    'value': 0,
-                    'ratingValue': 0
-                  },
-                  {
-                    'name': 'land-area',
-                    'value': 0,
-                    'ratingValue': 0
-                  },
-                  {
-                    'name': 'water-area',
-                    'value': 0,
-                    'ratingValue': 0
-                  },
-                  {
-                    'name': 'year',
-                    'value': 2014,
-                  }
-                ]
-            })
-            print(row[2]+ ',' + row[3])
-        else:
-            missing.append(row)
-        with open('missing.csv', 'w') as f:
-            writer = csv.writer(f)
-            writer.writerows(missing)
-        with open('city-data.json', 'w') as outfile:
-            json.dump(to_json, outfile, indent=4)
-
-# adds remaining sustainability index data for each city
-for aFile in csv_files:
-    print(csv_files[aFile])
-    with open(aFile, 'r') as f:
+def read_first_file():
+    # Structures initial jsonld file
+    with open(first_csv_file, 'r') as f:
         data = csv.reader(f)
-
+        i = 0
         for row in data:
-            cur_name = row[2]+ ',' + row[3]
-            matching_key = search(cur_name)
+            if i > 0:
+                r = requests.get(base_addr+row[2]+ ',' + row[3])
+                geocoder_result = r.json()
+                if len(geocoder_result['results']) > 0:
+                    to_json['@graph'].append( {
+                        '@type': 'https://schema.org/City',
+                        'name': row[2]+ ',' + row[3],
+                        'ratingValue': 0,
+                        'geo': {
+                            'latitude': geocoder_result['results'][0]['geometry']['location']['lat'],
+                            'longitude': geocoder_result['results'][0]['geometry']['location']['lng']
+                        },
+                        'address': {
+                          'addressLocality': row[2],
+                          'addressRegion': row[3]
+                        },
+                        'additionalProperty': [
+                          {
+                            'name': 'aqi',
+                            'value': row[1],
+                            'ratingValue': row[0]
+                          },
+                          {
+                            'name': 'avg-max-temp',
+                            'value': 0,
+                            'ratingValue': 0
+                          },
+                          {
+                            'name': 'avg-min-temp',
+                            'value': 0,
+                            'ratingValue': 0
+                          },
+                          {
+                            'name': 'population',
+                            'value': row[4],
+                          },
+                          {
+                            'name': 'pop-growth-rate',
+                            'value': 0,
+                            'ratingValue': 0
+                          },
+                          {
+                            'name': 'crime-index',
+                            'value': 0,
+                            'ratingValue': 0
+                          },
+                          {
+                            'name': 'land-area',
+                            'value': 0,
+                            'ratingValue': 0
+                          },
+                          {
+                            'name': 'water-area',
+                            'value': 0,
+                            'ratingValue': 0
+                          },
+                          {
+                            'name': 'year',
+                            'value': 2014,
+                          }]})
+                    print(i)
+                    i=i+1
+                else:
+                    print("uh oh, no " + row[2]+ ',' + row[3] )
+                    missing.append(row)
+                with open('missing.csv', 'w') as f:
+                    writer = csv.writer(f)
+                    writer.writerows(missing)
+                with open('city-data.json', 'w') as outfile:
+                    json.dump(to_json, outfile, indent=4)
+            else:
+                i=i+1
 
-            add_prop = get_additional_property(aFile)
-            prop_index = get_property_index(to_json['@graph'][matching_key]['additionalProperty'],add_prop)
-
-            to_json['@graph'][matching_key]['additionalProperty'][prop_index]["value"] = row[1]
-            to_json['@graph'][matching_key]['additionalProperty'][prop_index]["ratingValue"] = row[0]
 
 
-with open('city-data.json', 'w') as outfile:
-    json.dump(to_json, outfile, indent=4)
+read_first_file()

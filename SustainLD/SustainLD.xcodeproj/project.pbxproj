@@ -15,6 +15,7 @@
 		D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D09D1E654AB90080090C /* LaunchScreen.storyboard */; };
 		D34B22D21E7F4811006D9705 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34B22D11E7F4811006D9705 /* NameViewController.swift */; };
 		D34B22D51E7F51D8006D9705 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34B22D31E7F51D8006D9705 /* Auth.storyboard */; };
+		D367D4E01E9424EB0029A225 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367D4DF1E9424EB0029A225 /* ListViewController.swift */; };
 		D3A0F9351E6606CE00638A2E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A0F9341E6606CE00638A2E /* LoginViewController.swift */; };
 		D3A0F9381E660C5A00638A2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3A0F9371E660C5A00638A2E /* GoogleService-Info.plist */; };
 		D3A0F93B1E660F9C00638A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A0F93A1E660F9C00638A2E /* Main.storyboard */; };
@@ -23,6 +24,10 @@
 		D3D645CB1E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645B91E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf */; };
 		D3D645CE1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645BC1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf */; };
 		D3D645D41E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645C21E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf */; };
+		D3F730D61E92CEBA00BDA0D4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F730D51E92CEBA00BDA0D4 /* MapViewController.swift */; };
+		D3F730D81E92CEC600BDA0D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F730D71E92CEC600BDA0D4 /* ProfileViewController.swift */; };
+		D3F730DA1E92CED300BDA0D4 /* AlgoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F730D91E92CED300BDA0D4 /* AlgoViewController.swift */; };
+		D3F730DC1E92D27D00BDA0D4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F730DB1E92D27C00BDA0D4 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,7 @@
 		D327D0A01E654AB90080090C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D34B22D11E7F4811006D9705 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		D34B22D41E7F51D8006D9705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
+		D367D4DF1E9424EB0029A225 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D3A0F9341E6606CE00638A2E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D3A0F9371E660C5A00638A2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3A0F93A1E660F9C00638A2E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +52,10 @@
 		D3D645B91E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskExtraLight.otf"; sourceTree = "<group>"; };
 		D3D645BC1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskLight.otf"; sourceTree = "<group>"; };
 		D3D645C21E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskRegular.otf"; sourceTree = "<group>"; };
+		D3F730D51E92CEBA00BDA0D4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D3F730D71E92CEC600BDA0D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D3F730D91E92CED300BDA0D4 /* AlgoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoViewController.swift; sourceTree = "<group>"; };
+		D3F730DB1E92D27C00BDA0D4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F730DC1E92D27D00BDA0D4 /* MapKit.framework in Frameworks */,
 				825AB56BB16082BBACBE94DB /* Pods_SustainLD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +83,7 @@
 		201CE8781E901D14D0BB14FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3F730DB1E92D27C00BDA0D4 /* MapKit.framework */,
 				27045FA77B7C810CFBFD57D3 /* Pods_SustainLD.framework */,
 			);
 			name = Frameworks;
@@ -104,7 +116,6 @@
 				D3A0F9391E660F6C00638A2E /* Main */,
 				D3A0F9361E660A1A00638A2E /* Auth */,
 				D327D0911E654AB90080090C /* AppDelegate.swift */,
-				D327D0931E654AB90080090C /* ViewController.swift */,
 				D327D09B1E654AB90080090C /* Assets.xcassets */,
 				D327D09D1E654AB90080090C /* LaunchScreen.storyboard */,
 				D327D0A01E654AB90080090C /* Info.plist */,
@@ -117,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				D34B22D31E7F51D8006D9705 /* Auth.storyboard */,
+				D327D0931E654AB90080090C /* ViewController.swift */,
 				D3A0F9341E6606CE00638A2E /* LoginViewController.swift */,
 				D3A0F93C1E660FDD00638A2E /* SignUpViewController.swift */,
 				D34B22D11E7F4811006D9705 /* NameViewController.swift */,
@@ -128,6 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				D3A0F93A1E660F9C00638A2E /* Main.storyboard */,
+				D3F730D51E92CEBA00BDA0D4 /* MapViewController.swift */,
+				D3F730D71E92CEC600BDA0D4 /* ProfileViewController.swift */,
+				D3F730D91E92CED300BDA0D4 /* AlgoViewController.swift */,
+				D367D4DF1E9424EB0029A225 /* ListViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -187,6 +203,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 29K7K6F6J8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -284,8 +305,12 @@
 				D34B22D21E7F4811006D9705 /* NameViewController.swift in Sources */,
 				D3A0F9401E66111E00638A2E /* User.swift in Sources */,
 				D327D0921E654AB90080090C /* AppDelegate.swift in Sources */,
+				D367D4E01E9424EB0029A225 /* ListViewController.swift in Sources */,
 				D327D09A1E654AB90080090C /* SustainLD.xcdatamodeld in Sources */,
+				D3F730D81E92CEC600BDA0D4 /* ProfileViewController.swift in Sources */,
 				D3A0F93D1E660FDD00638A2E /* SignUpViewController.swift in Sources */,
+				D3F730D61E92CEBA00BDA0D4 /* MapViewController.swift in Sources */,
+				D3F730DA1E92CED300BDA0D4 /* AlgoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-globe-red-nl";
 				DEVELOPMENT_TEAM = 29K7K6F6J8;
 				INFOPLIST_FILE = SustainLD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.asu.furi.SustainLD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-globe-red-nl";
 				DEVELOPMENT_TEAM = 29K7K6F6J8;
 				INFOPLIST_FILE = SustainLD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.asu.furi.SustainLD;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MapViewController: UIViewController {
 
@@ -21,6 +22,13 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func signOutClicked(_ sender: Any) {
+        try! FIRAuth.auth()!.signOut()
+        
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "firstNavigationController")
+        self.present(controller, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

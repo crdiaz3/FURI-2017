@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 
+@available(iOS 10.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -55,10 +56,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             barMetrics: .default)
         
         UINavigationBar.appearance().shadowImage = UIImage()
+        
+        UINavigationBar.appearance().tintColor = UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0)
+        // Bar background color
+        // UITabBar.appearance().barTintColor = UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0)
+        // #c22025
+        UITabBar.appearance().tintColor = UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0)
     }
 
     // MARK: - Core Data stack
 
+    @available(iOS 10.0, *)
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
