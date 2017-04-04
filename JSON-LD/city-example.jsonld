@@ -7,10 +7,12 @@
         "name": "Tempe, AZ",
         "ratingValue": 100,
         "geo": {
+            "@id": "geo",
             "latitude": 33.4255104,
             "longitude": -111.94000
         },
         "address": {
+          "@id": "address",
           "addressLocality": "Tempe",
           "addressRegion": "AZ"
         },
