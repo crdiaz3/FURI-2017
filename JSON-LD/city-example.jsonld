@@ -3,6 +3,7 @@
     "@graph": [
       {
         "@type": "https://schema.org/City",
+        "@id": "Tempe, AZ",
         "name": "Tempe, AZ",
         "ratingValue": 100,
         "geo": {
@@ -15,46 +16,55 @@
         },
         "additionalProperty": [
           {
+            "@id": "aqi",
             "name": "aqi",
             "value": 1.1,
             "ratingValue": 100
           },
           {
+            "@id": "avg-max-tem",
             "name": "avg-max-temp",
             "value": 1.1,
             "ratingValue": 100
           },
           {
+            "@id": "avg-min-temp",
             "name": "avg-min-temp",
             "value": 1.1,
             "ratingValue": 100
           },
           {
+            "@id": "population",
             "name": "population",
             "value": 100,
             "ratingValue": 100
           },
           {
+            "@id": "pop-growth-rate",
             "name": "pop-growth-rate",
             "value": 1.1,
             "ratingValue": 100
           },
           {
+            "@id": "crime-index",
             "name": "crime-index",
             "value": 1.1,
             "ratingValue": 100
           },
           {
+            "@id": "land-area",
             "name": "land-area",
             "value": 1.1,
             "ratingValue": 90
           },
           {
+            "@id": "water-area",
             "name": "water-area",
             "value": 1.1,
             "ratingValue": 10
           },
           {
+            "@id": "year",
             "name": "year",
             "value": 2014,
             "ratingValue": 95
