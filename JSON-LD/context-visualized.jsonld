@@ -1,0 +1,29 @@
+{
+
+    "name": "http://schema.org/name",
+    "geo": "http://schema.org/GeoCoordinates",
+    "ratingValue": {
+      "@id": "https://schema.org/ratingValue",
+      "@type": "xsd:float"
+    },
+    "latitude": {
+      "@id": "http://schema.org/latitude",
+      "@type": "xsd:float"
+    },
+    "longitude": {
+      "@id": "http://schema.org/longitude",
+      "@type": "xsd:float"
+    },
+    "address":  "https://schema.org/PostalAddress",
+    "addressLocality": {
+      "@id": "https://schema.org/addressLocality",
+      "@type": "xsd:string"
+    },
+    "addressRegion": {
+      "@id": "https://schema.org/addressRegion",
+      "@type": "xsd:string"
+    },
+    "additionalProperty": "https://schema.org/additionalProperty",
+    "value": "https://schema.org/PropertyValue",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+}
