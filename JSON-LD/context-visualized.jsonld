@@ -1,5 +1,6 @@
 {
 
+    "@id":"City",
     "name": "http://schema.org/name",
     "geo": "http://schema.org/GeoCoordinates",
     "ratingValue": {
