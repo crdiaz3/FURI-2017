@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0)
         // Bar background color
         // UITabBar.appearance().barTintColor = UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0)
-        // #c22025
+         // #c22025
         UITabBar.appearance().tintColor = UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0)
     }
 

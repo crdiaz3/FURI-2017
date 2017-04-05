@@ -18,7 +18,7 @@ def write_to_csv(data,file_name): #reference: http://pymotw.com/2/csv/
 def get_min_temp_info():
     captured_data = []
     #the base url to start scraping
-    base_url = "http://www.usa.com/rank/us--average-min-temperature--city-rank.htm?yr=9000&dis=50&wist=&plow=&phigh="
+    base_url = "http://www.usa.com/rank/us--average-min-temperature--city-rank.htm?hl=&hlst=&wist=&yr=&dis=&sb=DESC&plow=&phigh=&ps="
 
     for page_num in range(1,192):
         cur_url = base_url + str(page_num)

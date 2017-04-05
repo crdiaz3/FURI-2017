@@ -21,50 +21,50 @@
           {
             "@id": "aqi",
             "name": "aqi",
-            "value": 1.1,
-            "ratingValue": 100
+            "value": 45.1,
+            "ratingValue": 14854
           },
           {
             "@id": "avg-max-tem",
             "name": "avg-max-temp",
-            "value": 1.1,
-            "ratingValue": 100
+            "value": 86.57,
+            "ratingValue": 111
           },
           {
             "@id": "avg-min-temp",
             "name": "avg-min-temp",
-            "value": 1.1,
-            "ratingValue": 100
+            "value": 58.66,
+            "ratingValue": 1606
           },
           {
             "@id": "population",
             "name": "population",
-            "value": 100,
-            "ratingValue": 100
+            "value": 166975,
+            "ratingValue": 8
           },
           {
             "@id": "pop-growth-rate",
             "name": "pop-growth-rate",
-            "value": 1.1,
-            "ratingValue": 100
+            "value": 5.26,
+            "ratingValue": 166975
           },
           {
             "@id": "crime-index",
             "name": "crime-index",
-            "value": 1.1,
-            "ratingValue": 100
+            "value": 2614,
+            "ratingValue": 1083
           },
           {
             "@id": "land-area",
             "name": "land-area",
-            "value": 1.1,
-            "ratingValue": 90
+            "value": 39.93,
+            "ratingValue": 54
           },
           {
             "@id": "water-area",
             "name": "water-area",
-            "value": 1.1,
-            "ratingValue": 10
+            "value": 0.26,
+            "ratingValue": 116
           },
           {
             "@id": "year",
