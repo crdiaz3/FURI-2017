@@ -1,8 +1,12 @@
 {
-
     "@id":"City",
-    "name": "http://schema.org/name",
-    "geo": "http://schema.org/GeoCoordinates",
+    "name": {
+      "@id": "http://schema.org/name",
+      "@type": "xsd:string"
+    },
+    "geo": {
+      "@id": "http://schema.org/GeoCoordinates",
+    },
     "ratingValue": {
       "@id": "https://schema.org/ratingValue",
       "@type": "xsd:float"
@@ -15,7 +19,9 @@
       "@id": "http://schema.org/longitude",
       "@type": "xsd:float"
     },
-    "address":  "https://schema.org/PostalAddress",
+    "address":  {
+        "@id": "https://schema.org/PostalAddress",
+    },
     "addressLocality": {
       "@id": "https://schema.org/addressLocality",
       "@type": "xsd:string"
