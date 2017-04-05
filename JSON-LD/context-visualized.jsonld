@@ -5,7 +5,7 @@
       "@type": "xsd:string"
     },
     "geo": {
-      "@id": "http://schema.org/GeoCoordinates",
+      "@id": "http://schema.org/GeoCoordinates"
     },
     "ratingValue": {
       "@id": "https://schema.org/ratingValue",
@@ -20,7 +20,7 @@
       "@type": "xsd:float"
     },
     "address":  {
-        "@id": "https://schema.org/PostalAddress",
+        "@id": "https://schema.org/PostalAddress"
     },
     "addressLocality": {
       "@id": "https://schema.org/addressLocality",
@@ -30,7 +30,9 @@
       "@id": "https://schema.org/addressRegion",
       "@type": "xsd:string"
     },
-    "additionalProperty": "https://schema.org/additionalProperty",
+    "additionalProperty": {
+       "@id": "https://schema.org/additionalProperty"
+    }
     "value": "https://schema.org/PropertyValue",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
 }
