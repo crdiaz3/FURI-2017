@@ -32,7 +32,7 @@
     },
     "additionalProperty": {
        "@id": "https://schema.org/additionalProperty"
-    }
+    },
     "value": "https://schema.org/PropertyValue",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
 }
