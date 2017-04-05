@@ -161,3 +161,4 @@ def combine_remaining_files():
                     i = i+1
 
 combine_remaining_files()
+# avg-max-temp - 3600
