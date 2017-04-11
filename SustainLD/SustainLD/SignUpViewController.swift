@@ -43,6 +43,11 @@ class SignUpViewController: UIViewController {
         
         emailField?.addTarget(self, action: #selector(SignUpViewController.checkEmailPwFields), for: .editingChanged)
         
+        emailField.addBottomBorderWithColor(color: UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0), width: 2)
+        
+        passwordField.addBottomBorderWithColor(color: UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0), width: 2)
+        
+        confirmPasswordField.addBottomBorderWithColor(color: UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0), width: 2)
     }
     
     

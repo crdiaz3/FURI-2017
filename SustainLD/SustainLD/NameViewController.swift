@@ -36,6 +36,11 @@ class NameViewController: UIViewController {
         // Email View Config
         nextButton?.isEnabled = false
         
+        // UITextField Styling
+        firstNameField.addBottomBorderWithColor(color: UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0), width: 2)
+        
+        lastNameField.addBottomBorderWithColor(color: UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0), width: 2)
+        
     }
     
     func nameCheck(){
