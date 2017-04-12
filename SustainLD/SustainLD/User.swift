@@ -14,11 +14,13 @@ class User {
     var email: String
     var firstName: String
     var lastName: String
+    var algorithms: NSDictionary
     
     init() {
         self.email = ""
         self.firstName = ""
         self.lastName = ""
+        self.algorithms = [String: NSDictionary]() as NSDictionary
     }
     
     func addUserToFirebase(password newPassword:String) -> Bool {
