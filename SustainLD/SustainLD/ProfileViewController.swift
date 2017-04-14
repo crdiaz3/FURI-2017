@@ -13,11 +13,8 @@ import FirebaseDatabase
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var reTypePasswordField: UITextField!
-    
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var aTableView: UITableView!
@@ -73,11 +70,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func configureImage(){
-        profileImageView.layer.borderWidth = 3
+       // profileImageView.layer.borderWidth = 3
         profileImageView.layer.masksToBounds = false
         //profileImageView.layer.borderColor = UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0).cgColor
         
-        profileImageView.layer.borderColor = UIColor.black.cgColor
+       // profileImageView.layer.borderColor = UIColor.black.cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.height/2
         profileImageView.clipsToBounds = true
     }
@@ -112,6 +109,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         } else {
             reTypePasswordField.addBottomBorderWithColor(color: UIColor.lightGray, width: 2)
         }
+    }
+    
+    @IBAction func algoHeaderClicked(_ sender: Any) {
+        aTableView.isHidden = !aTableView.isHidden
     }
 
     @IBAction func signOutClicked(_ sender: Any) {

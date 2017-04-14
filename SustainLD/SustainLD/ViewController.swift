@@ -14,9 +14,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        /*if (FIRAuth.auth()?.currentUser) != nil {
+            // segue to main view controller
+            self.performSegue(withIdentifier: "alreadyLoggedInSegue", sender: self)
+        } else {
+            // sign in
+        }*/
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         if (FIRAuth.auth()?.currentUser) != nil {
             // segue to main view controller
-            NSLog("Login Successful")
             self.performSegue(withIdentifier: "alreadyLoggedInSegue", sender: self)
         } else {
             // sign in

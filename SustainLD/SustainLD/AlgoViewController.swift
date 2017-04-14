@@ -10,13 +10,17 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    @IBOutlet weak var pickerView: UIPickerView!
+class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerViewDelegate, UIPopoverPresentationControllerDelegate, UITextFieldDelegate {
+    @IBOutlet weak var algoSelectBox: UITextField!
+    @IBOutlet weak var algoDropDown: UIPickerView!
     
     @IBOutlet weak var algoTextField: UITextField!
     
-    @IBOutlet weak var algoPickerView: UIPickerView!
+    @IBOutlet weak var sustainPickerView: UIPickerView!
+    
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var saveNRunButton: UIButton!
+    
     
     var pickerDataSource = ["AQI - Air Quality Index",
                             "MinT - Avg. Min Temp",
@@ -26,9 +30,13 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
                             "WA - Water Area",
                             "PG - Pop. Growth"];
     
+    var algoPickerSource = [""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        saveButton.isEnabled = false
+        saveNRunButton.isEnabled = false
         configureField()
         populateUserInfo()
     }
@@ -44,6 +52,8 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         
         // Retrieve Name
         let userID = FIRAuth.auth()?.currentUser?.uid
+        
+        NSLog(String(describing: userID))
         
         ref.child("userInfo").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -62,8 +72,29 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         
         // Retrieve Algorithms
         ref.child("algorithms").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
             // Get user value
             curUser.algorithms = (snapshot.value as? NSDictionary)!
+            
+            self.algoPickerSource = curUser.algorithms.allKeys as! [String]
+            self.algoDropDown.reloadAllComponents()
+            var runningAlgo = false
+            
+            for (key,value) in curUser.algorithms {
+                for(_, secondValue) in value as! NSDictionary {
+                    if(secondValue as? Bool == true){
+                        self.algoSelectBox.text = key as? String
+                        
+                        let innerDict=curUser.algorithms.value(forKey: key as! String) as! NSDictionary
+                        self.algoTextField.text = innerDict.value(forKey: "formula") as? String
+                        runningAlgo = true
+                    }
+                }
+            }
+            
+            if(!runningAlgo){
+                self.algoSelectBox.text = self.algoPickerSource[0]
+            }
             
         }) { (error) in
             print(error.localizedDescription)
@@ -77,29 +108,81 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         // UITextField Styling
         algoTextField.addBottomBorderWithColor(color: UIColor.lightGray, width: 2)
         
+        algoSelectBox.addBottomBorderWithColor(color: UIColor.black, width: 2)
+        
     }
     
     func algoCheck(){
         
         // Check if algo has been changed
         if algoTextField.text! != "" {
-            
+            saveButton.isEnabled = true
+            saveNRunButton.isEnabled = true
             algoTextField.addBottomBorderWithColor(color: UIColor(hue: 359/360, saturation: 83/100, brightness: 76/100, alpha: 1.0), width: 2)
         } else {
             algoTextField.addBottomBorderWithColor(color: UIColor.lightGray, width: 2)
+            saveButton.isEnabled = false
+            saveNRunButton.isEnabled = false
         }
     }
     
+    @IBAction func saveNRunClicked(_ sender: Any) {
+        
+
+    }
+    
+    @IBAction func saveClicked(_ sender: Any) {
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerDataSource.count
+        var count = 0
+        
+        if(pickerView == sustainPickerView){
+            count = pickerDataSource.count
+        } else if(pickerView == algoDropDown){
+            count = algoPickerSource.count
+        }
+        
+        return count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerDataSource[row]
+        var title = ""
+        
+        if(pickerView == sustainPickerView){
+            title = pickerDataSource[row]
+        } else if(pickerView == algoDropDown){
+            self.view.endEditing(true)
+            title = algoPickerSource[row]
+        }
+        
+        return title
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(pickerView == algoDropDown){
+            self.algoSelectBox.text = self.algoPickerSource[row]
+            
+            let innerDict=curUser.algorithms.value(forKey: self.algoPickerSource[row]) as! NSDictionary
+            self.algoTextField.text = innerDict.value(forKey: "formula") as? String
+            self.algoDropDown.isHidden = true
+        }
+        
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if textField == self.algoSelectBox {
+            self.algoDropDown.isHidden = false
+            //if you dont want the users to se the keyboard type:
+            
+            textField.endEditing(true)
+        }
+        
     }
         
 
@@ -116,14 +199,19 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         self.view.endEditing(true)
     }
     
-    /*
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        
     }
-    */
+    
 
 }

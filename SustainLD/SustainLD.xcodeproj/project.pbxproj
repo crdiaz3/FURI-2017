@@ -24,6 +24,7 @@
 		D3D645CB1E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645B91E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf */; };
 		D3D645CE1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645BC1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf */; };
 		D3D645D41E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D645C21E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf */; };
+		D3E00B5A1EA0ABA300554907 /* PopUpSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E00B591EA0ABA300554907 /* PopUpSaveViewController.swift */; };
 		D3E885631E9D3CB10020C318 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E885621E9D3CB10020C318 /* CustomTextField.swift */; };
 		D3E8856A1E9E27970020C318 /* AlgoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E885691E9E27970020C318 /* AlgoTableViewCell.swift */; };
 		D3F730D61E92CEBA00BDA0D4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F730D51E92CEBA00BDA0D4 /* MapViewController.swift */; };
@@ -54,6 +55,7 @@
 		D3D645B91E803859000E5FFE /* HVD Fonts - NiveauGroteskExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskExtraLight.otf"; sourceTree = "<group>"; };
 		D3D645BC1E803859000E5FFE /* HVD Fonts - NiveauGroteskLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskLight.otf"; sourceTree = "<group>"; };
 		D3D645C21E803859000E5FFE /* HVD Fonts - NiveauGroteskRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HVD Fonts - NiveauGroteskRegular.otf"; sourceTree = "<group>"; };
+		D3E00B591EA0ABA300554907 /* PopUpSaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpSaveViewController.swift; sourceTree = "<group>"; };
 		D3E885621E9D3CB10020C318 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D3E885691E9E27970020C318 /* AlgoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoTableViewCell.swift; sourceTree = "<group>"; };
 		D3F730D51E92CEBA00BDA0D4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				D3F730D71E92CEC600BDA0D4 /* ProfileViewController.swift */,
 				D3F730D91E92CED300BDA0D4 /* AlgoViewController.swift */,
 				D367D4DF1E9424EB0029A225 /* ListViewController.swift */,
+				D3E00B591EA0ABA300554907 /* PopUpSaveViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E00B5A1EA0ABA300554907 /* PopUpSaveViewController.swift in Sources */,
 				D3A0F9351E6606CE00638A2E /* LoginViewController.swift in Sources */,
 				D327D0941E654AB90080090C /* ViewController.swift in Sources */,
 				D34B22D21E7F4811006D9705 /* NameViewController.swift in Sources */,
