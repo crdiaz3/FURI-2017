@@ -80,20 +80,22 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
             self.algoDropDown.reloadAllComponents()
             var runningAlgo = false
             
-            for (key,value) in curUser.algorithms {
-                for(_, secondValue) in value as! NSDictionary {
-                    if(secondValue as? Bool == true){
-                        self.algoSelectBox.text = key as? String
+            for (key,_) in curUser.algorithms {
+                let innerDict=curUser.algorithms.value(forKey: key as! String) as! NSDictionary
+                if(innerDict["public"] as? Bool == true){
+                    self.algoSelectBox.text = key as? String
+                    self.algoTextField.text = innerDict.value(forKey: "formula") as? String
                         
-                        let innerDict=curUser.algorithms.value(forKey: key as! String) as! NSDictionary
-                        self.algoTextField.text = innerDict.value(forKey: "formula") as? String
-                        runningAlgo = true
-                    }
+                    runningAlgo = true
                 }
             }
             
             if(!runningAlgo){
-                self.algoSelectBox.text = self.algoPickerSource[0]
+                self.algoSelectBox.text = curUser.algorithms.allKeys[0] as? String
+                
+                let innerDict = curUser.algorithms.value(forKey: self.algoSelectBox.text!) as! NSDictionary
+                self.algoTextField.text = innerDict.value(forKey: "formula") as? String
+                
             }
             
         }) { (error) in
