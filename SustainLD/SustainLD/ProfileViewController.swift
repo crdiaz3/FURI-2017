@@ -111,9 +111,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-    @IBAction func algoHeaderClicked(_ sender: Any) {
-        aTableView.isHidden = !aTableView.isHidden
-    }
 
     @IBAction func signOutClicked(_ sender: Any) {
         try! FIRAuth.auth()!.signOut()

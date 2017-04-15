@@ -77,8 +77,8 @@
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="6aV-hD-u2g"/>
-                                        <include reference="xWs-s9-uUG"/>
                                         <exclude reference="ZY3-SN-4Ym"/>
+                                        <include reference="xWs-s9-uUG"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -132,13 +132,13 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="fxk-Ri-RPn"/>
-                                <exclude reference="byQ-y2-AcK"/>
                                 <exclude reference="8pv-Od-ggg"/>
+                                <exclude reference="byQ-y2-AcK"/>
+                                <exclude reference="fxk-Ri-RPn"/>
                                 <exclude reference="k5U-Am-R7F"/>
-                                <exclude reference="w9Z-S4-RYG"/>
-                                <exclude reference="RdE-pL-6d4"/>
                                 <exclude reference="8v0-h1-zsB"/>
+                                <exclude reference="RdE-pL-6d4"/>
+                                <exclude reference="w9Z-S4-RYG"/>
                                 <exclude reference="GyB-5s-bx9"/>
                                 <exclude reference="eLc-B6-uD0"/>
                                 <exclude reference="HN3-9J-BaR"/>
@@ -146,26 +146,26 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
-                                <include reference="fxk-Ri-RPn"/>
-                                <include reference="byQ-y2-AcK"/>
-                                <include reference="8pv-Od-ggg"/>
-                                <exclude reference="lcS-fK-Mfu"/>
                                 <exclude reference="158-Xd-khn"/>
                                 <exclude reference="6lm-aH-cbG"/>
-                                <include reference="k5U-Am-R7F"/>
+                                <include reference="8pv-Od-ggg"/>
                                 <exclude reference="AVR-8y-dfj"/>
+                                <include reference="byQ-y2-AcK"/>
+                                <include reference="fxk-Ri-RPn"/>
+                                <include reference="k5U-Am-R7F"/>
+                                <exclude reference="lcS-fK-Mfu"/>
                                 <exclude reference="6el-cZ-ze1"/>
-                                <include reference="w9Z-S4-RYG"/>
-                                <include reference="RdE-pL-6d4"/>
                                 <include reference="8v0-h1-zsB"/>
-                                <exclude reference="wn5-Fy-VJX"/>
                                 <exclude reference="FcO-DR-AJg"/>
                                 <exclude reference="GPR-dD-bOD"/>
-                                <exclude reference="ReK-oh-ch3"/>
+                                <include reference="RdE-pL-6d4"/>
+                                <include reference="w9Z-S4-RYG"/>
+                                <exclude reference="wn5-Fy-VJX"/>
                                 <include reference="GyB-5s-bx9"/>
+                                <exclude reference="ReK-oh-ch3"/>
                                 <include reference="eLc-B6-uD0"/>
-                                <include reference="HN3-9J-BaR"/>
                                 <exclude reference="FTP-47-0k8"/>
+                                <include reference="HN3-9J-BaR"/>
                             </mask>
                         </variation>
                     </view>
@@ -273,15 +273,15 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="mOF-ML-ogM"/>
                                         <exclude reference="7Cy-h5-c2c"/>
+                                        <exclude reference="mOF-ML-ogM"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <exclude reference="tbf-rf-6s8"/>
-                                        <include reference="mOF-ML-ogM"/>
                                         <include reference="7Cy-h5-c2c"/>
+                                        <include reference="mOF-ML-ogM"/>
+                                        <exclude reference="tbf-rf-6s8"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -526,20 +526,19 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="NH7-yU-chH"/>
                                         <exclude reference="34m-M8-3vh"/>
+                                        <exclude reference="NH7-yU-chH"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="NH7-yU-chH"/>
-                                        <exclude reference="ESg-u6-SWB"/>
                                         <include reference="34m-M8-3vh"/>
+                                        <exclude reference="ESg-u6-SWB"/>
+                                        <include reference="NH7-yU-chH"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <action selector="signUpClicked:" destination="3uh-6P-B1E" eventType="touchUpInside" id="mv3-PL-rhz"/>
-                                    <segue destination="fe6-80-76k" kind="presentation" identifier="signUpSeque" id="eaJ-pH-6KJ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-Type Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxe-Zp-xNo">
@@ -698,6 +697,7 @@
                         <outlet property="signUpButton" destination="DVc-ps-eoH" id="pGZ-YU-F8W"/>
                         <outlet property="validEmailLabel" destination="YH8-Ee-EtL" id="HDO-Fv-zwk"/>
                         <outlet property="validPasswordLabel" destination="sr8-ml-sbO" id="aWP-eT-jbG"/>
+                        <segue destination="fe6-80-76k" kind="presentation" identifier="signedUpSegue" id="6mm-ZR-eE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oup-LV-qWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -740,8 +740,8 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <exclude reference="Vg4-fU-v44"/>
                                         <include reference="7VS-Rh-q2w"/>
+                                        <exclude reference="Vg4-fU-v44"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -811,9 +811,9 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
+                                        <exclude reference="FBw-cs-r5S"/>
                                         <include reference="KkI-kC-jLx"/>
                                         <include reference="qmD-oK-6d4"/>
-                                        <exclude reference="FBw-cs-r5S"/>
                                     </mask>
                                 </variation>
                                 <connections>

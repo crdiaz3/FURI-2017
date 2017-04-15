@@ -6,6 +6,7 @@
 //  Copyright © 2017 Christopher Diaz. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
@@ -23,12 +24,13 @@ class User {
         self.algorithms = [String: NSDictionary]() as NSDictionary
     }
     
-    func addUserToFirebase(password newPassword:String) -> Bool {
+    func addUserToFirebase(password newPassword:String, calledView: SignUpViewController){
         
         var success: Bool
         success = false
         
         FIRAuth.auth()?.createUser(withEmail: curUser.email, password: newPassword, completion: { (user: FIRUser?, error) in
+            
             if error == nil {
                 //registration successful
                 var ref: FIRDatabaseReference!
@@ -37,15 +39,15 @@ class User {
                 ref.child("lastName").setValue(curUser.lastName)
                 ref.child("email").setValue(curUser.email)
                 success = true
+                calledView.performSegue(withIdentifier: "signedUpSegue", sender: calledView)
                 
             }else{
                 // Registration failure
-                NSLog("Failed to add: " + curUser.email)
-                success = false
+                calledView.signUpButton.isEnabled = false
+                calledView.validEmailLabel.text = "Email already exists"
+                calledView.validEmailLabel.textColor = UIColor.red
             }
         })
-        
-        return success
         
     }
     

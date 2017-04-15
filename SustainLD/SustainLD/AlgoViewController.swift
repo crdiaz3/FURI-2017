@@ -21,6 +21,9 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var saveNRunButton: UIButton!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    var newUser:Bool!
     
     var pickerDataSource = ["AQI - Air Quality Index",
                             "MinT - Avg. Min Temp",
@@ -37,6 +40,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         // Do any additional setup after loading the view.
         saveButton.isEnabled = false
         saveNRunButton.isEnabled = false
+        deleteButton.isEnabled = false
         configureField()
         populateUserInfo()
     }
@@ -49,7 +53,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
     func populateUserInfo(){
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
-        
+        self.algoDropDown.isHidden = true
         // Retrieve Name
         let userID = FIRAuth.auth()?.currentUser?.uid
         
@@ -72,30 +76,35 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         
         // Retrieve Algorithms
         ref.child("algorithms").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-            
             // Get user value
-            curUser.algorithms = (snapshot.value as? NSDictionary)!
-            
-            self.algoPickerSource = curUser.algorithms.allKeys as! [String]
-            self.algoDropDown.reloadAllComponents()
-            var runningAlgo = false
-            
-            for (key,_) in curUser.algorithms {
-                let innerDict=curUser.algorithms.value(forKey: key as! String) as! NSDictionary
-                if(innerDict["public"] as? Bool == true){
-                    self.algoSelectBox.text = key as? String
-                    self.algoTextField.text = innerDict.value(forKey: "formula") as? String
+            if ((snapshot.value) as? NSDictionary) != nil  {
+                
+                curUser.algorithms = (snapshot.value as? NSDictionary)!
+                
+                self.algoPickerSource = curUser.algorithms.allKeys as! [String]
+                self.algoDropDown.reloadAllComponents()
+                var runningAlgo = false
+                
+                for (key,_) in curUser.algorithms {
+                    let innerDict=curUser.algorithms.value(forKey: key as! String) as! NSDictionary
+                    if(innerDict["public"] as? Bool == true){
+                        self.algoSelectBox.text = key as? String
+                        self.algoTextField.text = innerDict.value(forKey: "formula") as? String
                         
-                    runningAlgo = true
+                        runningAlgo = true
+                    }
                 }
-            }
-            
-            if(!runningAlgo){
-                self.algoSelectBox.text = curUser.algorithms.allKeys[0] as? String
                 
-                let innerDict = curUser.algorithms.value(forKey: self.algoSelectBox.text!) as! NSDictionary
-                self.algoTextField.text = innerDict.value(forKey: "formula") as? String
-                
+                if(!runningAlgo){
+                    self.algoSelectBox.text = curUser.algorithms.allKeys[0] as? String
+                    
+                    let innerDict = curUser.algorithms.value(forKey: self.algoSelectBox.text!) as! NSDictionary
+                    self.algoTextField.text = innerDict.value(forKey: "formula") as? String
+                    
+                }
+                self.deleteButton.isEnabled = true
+            } else {
+                self.deleteButton.isEnabled = false
             }
             
         }) { (error) in
@@ -129,11 +138,16 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
     }
     
     @IBAction func saveNRunClicked(_ sender: Any) {
-        
+        performSegue(withIdentifier: "saveNRunSegue", sender: self)
 
     }
     
     @IBAction func saveClicked(_ sender: Any) {
+        performSegue(withIdentifier: "saveSegue", sender: self)
+    }
+    
+    @IBAction func deleteClicked(_ sender: Any) {
+        performSegue(withIdentifier: "deleteSegue", sender: self)
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -179,7 +193,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         if textField == self.algoSelectBox {
-            self.algoDropDown.isHidden = false
+            self.algoDropDown.isHidden = !self.algoDropDown.isHidden
             //if you dont want the users to se the keyboard type:
             
             textField.endEditing(true)
@@ -211,7 +225,9 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
+        let modal = segue.destination as! PopUpSaveViewController
+        modal.presentingSegue = segue.identifier
+        modal.passedAlgoName = self.algoSelectBox.text!
         
     }
     

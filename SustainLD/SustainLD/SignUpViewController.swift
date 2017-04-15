@@ -103,13 +103,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpClicked(_ sender: Any) {
-        if(curUser.addUserToFirebase(password: passwordField.text!)){
-            self.performSegue(withIdentifier: "loggedIn", sender: self)
-        } else {
-            signUpButton.isEnabled = false
-            self.validEmailLabel.text = "Email already exists"
-            self.validEmailLabel.textColor = UIColor.red
-        }
+        curUser.addUserToFirebase(password: passwordField.text!, calledView: self)
     }
     
     // hides keyboard if touch action happens outside of UITextView
@@ -130,14 +124,16 @@ class SignUpViewController: UIViewController {
         return false
     }
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        if(segue.identifier == "SignedUpSegue"){
+            let viewController = segue.destination as! AlgoViewController
+            viewController.newUser = true
+
+        }
      }
-     */
     
 }
