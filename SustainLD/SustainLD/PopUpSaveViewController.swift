@@ -14,6 +14,7 @@ class PopUpSaveViewController: UIViewController {
     
     var passedAlgoName:String!
     var presentingSegue:String!
+    var passedFormula:String!
 
     @IBOutlet weak var deleteNameTextField: UITextField!
     @IBOutlet weak var saveNameTextField: UITextField!
@@ -138,22 +139,67 @@ class PopUpSaveViewController: UIViewController {
             if error != nil {
                 print(error!)
             } else {
-                let alert = UIAlertController(title: "Delete Successfull", message: deletedAlgo + " has been deleted.", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: self.deleted))
+                
+                let callActionHandler = { (action:UIAlertAction!) -> Void in
+                    self.performSegue(withIdentifier: "backfromDeleteSegue", sender: self)
+                    
+                }
+                
+                let alert = UIAlertController(title: "Delete Successful", message: deletedAlgo + " has been deleted.", preferredStyle: UIAlertControllerStyle.alert)
+                
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: callActionHandler))
+                
                 self.present(alert, animated: true, completion: nil)
             }
         })
     }
     
-    func deleted(alert: UIAlertAction!){
-        performSegue(withIdentifier: "backToAlgoControllerSegue", sender: self)
-    }
     
     @IBAction func saveYesButtonClicked(_ sender: Any) {
+        
+        FIRDatabase.database().reference().child("algorithms").child(FIRAuth.auth()!.currentUser!.uid).child(saveNameTextField.text!).child("formula").setValue(passedFormula, withCompletionBlock: { (error, refer) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                var ref: FIRDatabaseReference!
+                ref = FIRDatabase.database().reference().child("algorithms").child(FIRAuth.auth()!.currentUser!.uid).child(self.saveNameTextField.text!)
+                ref.child("public").setValue(false)
+                ref.child("running").setValue(false)
+                
+                let callActionHandler = { (action:UIAlertAction!) -> Void in
+                    self.performSegue(withIdentifier: "backFromSaveSegue", sender: self)
+                }
+                
+                let alert = UIAlertController(title: "Add Successfull", message: self.saveNameTextField.text! + " has been saved.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: callActionHandler))
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
     
     @IBAction func saveNRunYesButtonClicked(_ sender: Any) {
+        FIRDatabase.database().reference().child("algorithms").child(FIRAuth.auth()!.currentUser!.uid).child(saveNRunNameTextField.text!).child("formula").setValue(passedFormula, withCompletionBlock: { (error, refer) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                var ref: FIRDatabaseReference!
+                ref = FIRDatabase.database().reference().child("algorithms").child(FIRAuth.auth()!.currentUser!.uid).child(self.saveNRunNameTextField.text!)
+                ref.child("public").setValue(false)
+                ref.child("running").setValue(true)
+                
+                let callActionHandler = { (action:UIAlertAction!) -> Void in
+                    self.performSegue(withIdentifier: "backFromSaveNRunSegue", sender: self)
+                }
+                
+                let alert = UIAlertController(title: "Add Successfull", message: self.saveNRunNameTextField.text! + " has been saved.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: callActionHandler))
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
+    
     
     @IBAction func noClicked(_ sender: Any) {
         self.dismiss(animated: true)

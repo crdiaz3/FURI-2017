@@ -17,6 +17,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var reTypePasswordField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var totalAlgos: UILabel!
+    @IBOutlet weak var runningAlgo: UILabel!
+    
     @IBOutlet weak var aTableView: UITableView!
     
     override func viewDidLoad() {
@@ -67,6 +70,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func populateUserInfo(){
         nameLabel.text = curUser.firstName + " " + curUser.lastName
+        totalAlgos.text = "Total Algorithms:  " + String(curUser.algorithms.allKeys.count)
+        runningAlgo.text = "Running:  "  + curUser.runningAlgo
+        
     }
     
     func configureImage(){

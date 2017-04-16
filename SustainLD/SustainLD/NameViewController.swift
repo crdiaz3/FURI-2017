@@ -33,7 +33,6 @@ class NameViewController: UIViewController {
         
         lastNameField?.addTarget(self, action: #selector(NameViewController.nameCheck), for: .editingChanged)
         
-        // Email View Config
         nextButton?.isEnabled = false
         
         // UITextField Styling

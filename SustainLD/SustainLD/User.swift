@@ -15,19 +15,18 @@ class User {
     var email: String
     var firstName: String
     var lastName: String
+    var runningAlgo:String
     var algorithms: NSDictionary
     
     init() {
         self.email = ""
         self.firstName = ""
         self.lastName = ""
+        self.runningAlgo = ""
         self.algorithms = [String: NSDictionary]() as NSDictionary
     }
     
     func addUserToFirebase(password newPassword:String, calledView: SignUpViewController){
-        
-        var success: Bool
-        success = false
         
         FIRAuth.auth()?.createUser(withEmail: curUser.email, password: newPassword, completion: { (user: FIRUser?, error) in
             
@@ -38,7 +37,6 @@ class User {
                 ref.child("firstName").setValue(curUser.firstName)
                 ref.child("lastName").setValue(curUser.lastName)
                 ref.child("email").setValue(curUser.email)
-                success = true
                 calledView.performSegue(withIdentifier: "signedUpSegue", sender: calledView)
                 
             }else{

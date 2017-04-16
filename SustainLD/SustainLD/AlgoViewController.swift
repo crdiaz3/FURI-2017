@@ -53,7 +53,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
     func populateUserInfo(){
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
-        self.algoDropDown.isHidden = true
+        self.algoDropDown?.isHidden = true
         // Retrieve Name
         let userID = FIRAuth.auth()?.currentUser?.uid
         
@@ -84,13 +84,12 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
                 self.algoPickerSource = curUser.algorithms.allKeys as! [String]
                 self.algoDropDown.reloadAllComponents()
                 var runningAlgo = false
-                
                 for (key,_) in curUser.algorithms {
                     let innerDict=curUser.algorithms.value(forKey: key as! String) as! NSDictionary
                     if(innerDict["public"] as? Bool == true){
                         self.algoSelectBox.text = key as? String
                         self.algoTextField.text = innerDict.value(forKey: "formula") as? String
-                        
+                        curUser.runningAlgo = (key as? String)!
                         runningAlgo = true
                     }
                 }
@@ -104,6 +103,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
                 }
                 self.deleteButton.isEnabled = true
             } else {
+                curUser.runningAlgo = ""
                 self.deleteButton.isEnabled = false
             }
             
@@ -228,7 +228,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         let modal = segue.destination as! PopUpSaveViewController
         modal.presentingSegue = segue.identifier
         modal.passedAlgoName = self.algoSelectBox.text!
-        
+        modal.passedFormula = self.algoTextField.text!
     }
     
 
