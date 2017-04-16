@@ -53,7 +53,6 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
     func populateUserInfo(){
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
-        self.algoDropDown?.isHidden = true
         // Retrieve Name
         let userID = FIRAuth.auth()?.currentUser?.uid
         
@@ -78,7 +77,6 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         ref.child("algorithms").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             if ((snapshot.value) as? NSDictionary) != nil  {
-                
                 curUser.algorithms = (snapshot.value as? NSDictionary)!
                 
                 self.algoPickerSource = curUser.algorithms.allKeys as! [String]
@@ -86,7 +84,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
                 var runningAlgo = false
                 for (key,_) in curUser.algorithms {
                     let innerDict=curUser.algorithms.value(forKey: key as! String) as! NSDictionary
-                    if(innerDict["public"] as? Bool == true){
+                    if(innerDict["running"] as? Bool == true){
                         self.algoSelectBox.text = key as? String
                         self.algoTextField.text = innerDict.value(forKey: "formula") as? String
                         curUser.runningAlgo = (key as? String)!
@@ -103,6 +101,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
                 }
                 self.deleteButton.isEnabled = true
             } else {
+                NSLog("No Algos")
                 curUser.runningAlgo = ""
                 self.deleteButton.isEnabled = false
             }
@@ -121,6 +120,7 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         
         algoSelectBox.addBottomBorderWithColor(color: UIColor.black, width: 2)
         
+        algoDropDown?.isHidden = true
     }
     
     func algoCheck(){
