@@ -1,78 +1,78 @@
 {
-    "@context": "https://raw.githubusercontent.com/crdiaz3/FURI-2017/master/JSON-LD/city-context.jsonld",
-    "@id": "SustainLD",
+    "@context": "https://raw.githubusercontent.com/crdiaz3/FURI-2017/master/JSON-LD/city-context.jsonld", 
     "@graph": [
-      {
-        "@type": "https://schema.org/City",
-        "@id": "Tempe, AZ",
-        "name": "Tempe, AZ",
-        "ratingValue": 100,
-        "geo": {
-            "@id": "geo",
-            "latitude": 33.4255104,
-            "longitude": -111.94000
-        },
-        "address": {
-          "@id": "address",
-          "addressLocality": "Tempe",
-          "addressRegion": "AZ"
-        },
-        "additionalProperty": [
-          {
-            "@id": "aqi",
-            "name": "aqi",
-            "value": 45.1,
-            "ratingValue": 14854
-          },
-          {
-            "@id": "avg-max-tem",
-            "name": "avg-max-temp",
-            "value": 86.57,
-            "ratingValue": 111
-          },
-          {
-            "@id": "avg-min-temp",
-            "name": "avg-min-temp",
-            "value": 58.66,
-            "ratingValue": 1606
-          },
-          {
-            "@id": "population",
-            "name": "population",
-            "value": 166975,
-            "ratingValue": 8
-          },
-          {
-            "@id": "pop-growth-rate",
-            "name": "pop-growth-rate",
-            "value": 5.26,
-            "ratingValue": 166975
-          },
-          {
-            "@id": "crime-index",
-            "name": "crime-index",
-            "value": 2614,
-            "ratingValue": 1083
-          },
-          {
-            "@id": "land-area",
-            "name": "land-area",
-            "value": 39.93,
-            "ratingValue": 54
-          },
-          {
-            "@id": "water-area",
-            "name": "water-area",
-            "value": 0.26,
-            "ratingValue": 116
-          },
-          {
-            "@id": "year",
-            "name": "year",
-            "value": 2014,
-            "ratingValue": 95
-          }
-        ]
-      }
-    ]
+        {
+            "name": "Tempe, AZ", 
+            "@id": "Tempe, AZ", 
+            "additionalProperty": [
+                {
+                    "@id": "aqi", 
+                    "name": "aqi", 
+                    "value": 45.1, 
+                    "ratingValue": 14854
+                }, 
+                {
+                    "@id": "avg-max-temp", 
+                    "name": "avg-max-temp", 
+                    "value": 86.57, 
+                    "ratingValue": 111
+                }, 
+                {
+                    "@id": "avg-min-temp", 
+                    "name": "avg-min-temp", 
+                    "value": 58.66, 
+                    "ratingValue": 1606
+                }, 
+                {
+                    "@id": "population", 
+                    "name": "population", 
+                    "value": 166975, 
+                    "ratingValue": 8
+                }, 
+                {
+                    "@id": "pop-growth-rate", 
+                    "name": "pop-growth-rate", 
+                    "value": 5.26, 
+                    "ratingValue": 166975
+                }, 
+                {
+                    "@id": "crime-index", 
+                    "name": "crime-index", 
+                    "value": 2614, 
+                    "ratingValue": 1083
+                }, 
+                {
+                    "@id": "land-area", 
+                    "name": "land-area", 
+                    "value": 39.93, 
+                    "ratingValue": 54
+                }, 
+                {
+                    "@id": "water-area", 
+                    "name": "water-area", 
+                    "value": 0.26, 
+                    "ratingValue": 116
+                }, 
+                {
+                    "@id": "year", 
+                    "name": "year", 
+                    "value": 2014, 
+                    "ratingValue": 95
+                }
+            ], 
+            "ratingValue": 100, 
+            "address": {
+                "addressLocality": "Tempe", 
+                "addressRegion": "AZ", 
+                "@id": "address"
+            }, 
+            "geo": {
+                "latitude": 33.4255104, 
+                "@id": "geo", 
+                "longitude": -111.94
+            }, 
+            "@type": "https://schema.org/City"
+        }
+    ], 
+    "@id": "SustainLD"
 }
