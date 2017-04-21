@@ -18,11 +18,10 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //cityTable.rowHeight = rowHeight
+        
         cityTable.delegate = self
         cityTable.dataSource = self
-        //cityTable.sectionHeaderHeight = 100.0
-
+        cityTable.rowHeight = rowHeight
         // Do any additional setup after loading the view.
     }
 
