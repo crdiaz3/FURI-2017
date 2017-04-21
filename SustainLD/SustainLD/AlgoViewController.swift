@@ -50,13 +50,16 @@ class AlgoViewController: UIViewController , UIPickerViewDataSource, UIPickerVie
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        populateUserInfo()
+    }
+    
     func populateUserInfo(){
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
         // Retrieve Name
         let userID = FIRAuth.auth()?.currentUser?.uid
-        
-        NSLog(String(describing: userID))
         
         ref.child("userInfo").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value

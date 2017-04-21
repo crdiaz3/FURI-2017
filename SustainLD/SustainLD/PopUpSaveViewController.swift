@@ -213,8 +213,10 @@ class PopUpSaveViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let algoController = segue.destination as! AlgoViewController
-        algoController.populateUserInfo()
+        
+        let barViewControllers = segue.destination as! UITabBarController
+        let destinationViewController = barViewControllers.viewControllers![0] as! AlgoViewController
+        destinationViewController.populateUserInfo()
     }
     
 

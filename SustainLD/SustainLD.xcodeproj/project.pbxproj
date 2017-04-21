@@ -13,6 +13,7 @@
 		D327D09A1E654AB90080090C /* SustainLD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D327D0981E654AB90080090C /* SustainLD.xcdatamodeld */; };
 		D327D09C1E654AB90080090C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327D09B1E654AB90080090C /* Assets.xcassets */; };
 		D327D09F1E654AB90080090C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D327D09D1E654AB90080090C /* LaunchScreen.storyboard */; };
+		D329BDD01EAA4A720001D1B1 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D329BDCF1EAA4A720001D1B1 /* CityTableViewCell.swift */; };
 		D34B22D21E7F4811006D9705 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34B22D11E7F4811006D9705 /* NameViewController.swift */; };
 		D34B22D51E7F51D8006D9705 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34B22D31E7F51D8006D9705 /* Auth.storyboard */; };
 		D367D4E01E9424EB0029A225 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367D4DF1E9424EB0029A225 /* ListViewController.swift */; };
@@ -45,6 +46,7 @@
 		D327D09B1E654AB90080090C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D327D09E1E654AB90080090C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D327D0A01E654AB90080090C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D329BDCF1EAA4A720001D1B1 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		D34B22D11E7F4811006D9705 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		D34B22D41E7F51D8006D9705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		D367D4DF1E9424EB0029A225 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				D3E885621E9D3CB10020C318 /* CustomTextField.swift */,
 				D3E885691E9E27970020C318 /* AlgoTableViewCell.swift */,
+				D329BDCF1EAA4A720001D1B1 /* CityTableViewCell.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -229,7 +232,7 @@
 				TargetAttributes = {
 					D327D08D1E654AB90080090C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 29K7K6F6J8;
+						DevelopmentTeam = 34NU864273;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -341,6 +344,7 @@
 				D3A0F93D1E660FDD00638A2E /* SignUpViewController.swift in Sources */,
 				D3F730D61E92CEBA00BDA0D4 /* MapViewController.swift in Sources */,
 				D3F730DA1E92CED300BDA0D4 /* AlgoViewController.swift in Sources */,
+				D329BDD01EAA4A720001D1B1 /* CityTableViewCell.swift in Sources */,
 				D3E8856A1E9E27970020C318 /* AlgoTableViewCell.swift in Sources */,
 				D3E885631E9D3CB10020C318 /* CustomTextField.swift in Sources */,
 			);
@@ -466,7 +470,7 @@
 			baseConfigurationReference = 521A628A6DA677FC11B8652A /* Pods-SustainLD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-globe-red-nl";
-				DEVELOPMENT_TEAM = 29K7K6F6J8;
+				DEVELOPMENT_TEAM = 34NU864273;
 				INFOPLIST_FILE = SustainLD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -481,7 +485,7 @@
 			baseConfigurationReference = 09FD4E7084AE8D7CB6E18D7C /* Pods-SustainLD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-globe-red-nl";
-				DEVELOPMENT_TEAM = 29K7K6F6J8;
+				DEVELOPMENT_TEAM = 34NU864273;
 				INFOPLIST_FILE = SustainLD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

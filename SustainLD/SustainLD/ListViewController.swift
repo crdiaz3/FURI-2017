@@ -9,10 +9,19 @@
 import UIKit
 import FirebaseAuth
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let rowHeight: CGFloat = 70
+    let cellSpacingHeight: CGFloat = 15
 
+    @IBOutlet weak var cityTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //cityTable.rowHeight = rowHeight
+        cityTable.delegate = self
+        cityTable.dataSource = self
+        //cityTable.sectionHeaderHeight = 100.0
 
         // Do any additional setup after loading the view.
     }
@@ -29,6 +38,41 @@ class ListViewController: UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "firstNavigationController")
         self.present(controller, animated: true, completion: nil)
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return curUser.algorithms.allKeys.count
+    }
+    
+    // Set the spacing between sections
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
+    
+    // Make the background color show through
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)  -> UITableViewCell {
+        
+        // Create an object of the dynamic cell "AlgoTableViewCell"
+        let cell = cityTable.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+        
+        
+        cell.cityNameLabel!.text = "Tempe, AZ"
+        cell.cityRankLabel!.text = "1"
+        
+        
+        // Return the configured cell
+        return cell
+    }
+
 
     /*
     // MARK: - Navigation

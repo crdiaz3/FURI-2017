@@ -47,7 +47,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)  -> UITableViewCell {
         
-        // Create an object of the dynamic cell "PlainCell"
+        // Create an object of the dynamic cell "AlgoTableViewCell"
         let cell = aTableView.dequeueReusableCell(withIdentifier: "AlgoTableViewCell", for: indexPath) as! AlgoTableViewCell
         
         let curAlgoName = curUser.algorithms.allKeys[indexPath.row] as! String
@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         let curAlgo = curUser.algorithms[curAlgoName ] as! NSDictionary
         
         cell.nameLabel!.text = curAlgoName
-        cell.globe!.isHidden = curAlgo["running"] as! BooleanLiteralType
+        cell.globe!.isHidden = !(curAlgo["running"] as! BooleanLiteralType)
        
         if(curAlgo["public"] as! BooleanLiteralType){
             cell.shareButton!.setImage(UIImage(named: "Share Filled-50"), for: UIControlState.normal)
@@ -130,14 +130,17 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    /*
+    
     // MARK: - Navigation
-
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let popController = segue.destination as! PopUpSaveViewController
+        popController.profileView = self
     }
     */
+    
 
 }
